@@ -1,0 +1,34 @@
+{% extends "_layouts/cp" %}
+
+{% set elementTypeClass = elementType %}
+{% set elementType = craft.elements.getElementType(elementTypeClass) %}
+
+{% if not elementType %}
+	{% exit 404 %}
+{% endif %}
+
+{% set sources = elementType.getSources() %}
+
+
+{% block sidebar %}
+	{% if sources is not empty %}
+		<nav>
+			{% include "_elements/sources" %}
+		</nav>
+	{% endif %}
+{% endblock %}
+
+
+{% block content %}
+	{% include "_elements/indexcontainer" with { hasThumbs: elementType.hasThumbs() } %}
+{% endblock %}
+
+
+{% block initJs %}
+	Craft.createElementIndex('{{ elementTypeClass }}', $('#main'), {
+		id: '{{ elementTypeClass }}Index',
+		criteria: { status: null }
+	});
+{% endblock %}
+
+{% includeJs block('initJs') %}

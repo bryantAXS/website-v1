@@ -1,0 +1,10 @@
+/*!
+ * Craft by Pixel & Tonic
+ *
+ * @package   Craft
+ * @author    Pixel & Tonic, Inc.
+ * @copyright Copyright (c) 2013, Pixel & Tonic, Inc.
+ * @license   http://buildwithcraft.com/license Craft License Agreement
+ * @link      http://buildwithcraft.com
+ */
+(function(a){var b=Garnish.Base.extend({$lockBtns:null,$currentPasswordInput:null,$spinner:null,modal:null,init:function(){this.$lockBtns=a(".btn.lock");this.addListener(this.$lockBtns,"click","showCurrentPasswordForm")},showCurrentPasswordForm:function(){if(!this.modal){var d=a('<form id="verifypasswordmodal" class="modal"/>').appendTo(Garnish.$bod),h=a('<div class="body"><p>'+Craft.t("Please enter your current password.")+"</p></div>").appendTo(d),f=a('<div class="passwordwrapper"/>').appendTo(h),e=a('<div class="buttons right"/>').appendTo(h),c=a('<div class="btn">'+Craft.t("Cancel")+"</div>").appendTo(e),g=a('<input type="submit" class="btn submit" value="'+Craft.t("Continue")+'" />').appendTo(e);this.$currentPasswordInput=a('<input type="password" class="text password fullwidth"/>').appendTo(f).passwordinput().focus();this.$spinner=a('<div class="spinner hidden"/>').appendTo(e);this.modal=new Garnish.Modal(d);this.addListener(c,"click",function(){this.modal.hide()});this.addListener(d,"submit","submitCurrentPassword")}else{this.modal.show()}if(!Garnish.isMobileBrowser(true)){this.$currentPasswordInput.focus()}},submitCurrentPassword:function(d){d.preventDefault();var c=this.$currentPasswordInput.val();if(c){this.$spinner.removeClass("hidden");var e={password:c};Craft.postActionRequest("users/verifyPassword",e,a.proxy(function(f){this.$spinner.addClass("hidden");if(typeof f.success!="undefined"&&f.success){a('<input type="hidden" name="password" value="'+c+'"/>').appendTo("#userform");a("#email, #newPassword").removeClass("disabled").removeAttr("disabled");this.$lockBtns.remove();this.modal.hide()}else{Garnish.shake(this.modal.$container)}},this))}}});new b()})(jQuery);

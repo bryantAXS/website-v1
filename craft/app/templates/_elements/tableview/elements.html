@@ -1,0 +1,24 @@
+{% for element in elements %}
+	<tr{% if element.id in disabledElementIds %} class="disabled"{% endif %} data-id="{{ element.id }}" data-label="{{ element }}" data-status="{{ element.getStatus() }}">
+		{% for attribute in attributes %}
+			{% if loop.index == 1 %}
+				<td scope="row" data-title="{{ attribute.label }}">
+					{% include "_elements/element" %}
+				</td>
+			{% else %}
+				{% if attribute.display is defined %}
+					{% set value = renderObjectTemplate(attribute.display, element) %}
+				{% else %}
+					{% set value = attribute(element, attribute.attribute) %}
+				{% endif %}
+				<td data-title="{{ attribute.label }}">
+					{%- if attribute.link is defined and attribute.link and element.getUrl() -%}
+						<a href="{{ element.getUrl() }}" target="_blank">{{ value|raw }}</a>
+					{%- else -%}
+						{{ value|raw }}
+					{%- endif -%}
+				</td>
+			{% endif %}
+		{% endfor %}
+	</tr>
+{% endfor %}
