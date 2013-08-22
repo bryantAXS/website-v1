@@ -7,6 +7,6 @@
 return array(
 	'server' 		=> 'localhost',
 	'user' 			=> 'root',
-	'password' 	=> 'root',
-	'database' 	=> 'authenticff-website',
+	'password' 	=> 'udh4756fhdknd8',
+	'database' 	=> 'authenticff-staging',
 );

@@ -1,5 +1,3 @@
-require File.expand_path("#{File.dirname(__FILE__)}/cap-assets/dbtasks")
-
 if !ENV['env'].nil? then
   set(:env, ENV['env'])
 else
@@ -8,18 +6,19 @@ end
 
 if !env.nil? && env == "production" then
 
+
 else
 
-  set :application, ""
+  set :application, "staging.authenticff.com"
   set :deploy_to, "/var/www/#{application}"
 
-  set :user, ""
-  set :password, ""
-  set :use_sudo, false
+  # set :user, ""
+  # set :password, ""
+  # set :use_sudo, false
 
-  role :app, ""
-  role :web, ""
-  role :db,  "", :primary => true
+  role :app, "198.58.109.239"
+  role :web, "198.58.109.239"
+  role :db,  "198.58.109.239", :primary => true
 
   set :branch, "master"
 
