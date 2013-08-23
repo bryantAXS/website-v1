@@ -27,6 +27,8 @@ define('CRAFT_PLUGINS_PATH', realpath(dirname(__FILE__) . "/../plugins").'/');
 // Move templates path to right above web root
 define('CRAFT_TEMPLATES_PATH', realpath(dirname(__FILE__) . "/../templates").'/');
 
+define('CRAFT_STORAGE_PATH', realpath(dirname(__FILE__) . "/../craft/storage").'/');
+
 
 
 // Do not edit below this line

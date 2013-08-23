@@ -61,7 +61,7 @@ namespace :deploy do
   task :configure_files, :roles => :web do
     run "rm -R #{deploy_to}/current/config"
     run "chmod -R 777 #{deploy_to}/current/craft/storage"
-    run "chmod -R 774 #{deploy_to}/current/craft/config"
+    run "chmod -R 777 #{deploy_to}/current/craft/config"
   end
 
 end
