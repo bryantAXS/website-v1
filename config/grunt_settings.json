@@ -1,9 +1,15 @@
 {
   "db": {
     "local":{
-      "database": "",
-      "user": "",
-      "pass": "",
+      "database": "authenticff-website",
+      "user": "root",
+      "pass": "root",
+      "host": "localhost"
+    },
+    "staging":{
+      "database": "authenticff-staging",
+      "user": "root",
+      "pass": "udh4756fhdknd8",
       "host": "127.0.0.1"
     }
   }

@@ -1,11 +1,14 @@
 module.exports = function(grunt) {
 
+
+  var settings = grunt.file.readJSON('config/grunt_settings.json');
+
+  console.log(settings.db.local.database);
+
   // Project configuration.
   grunt.initConfig({
 
     pkg: grunt.file.readJSON('package.json'),
-
-    settings: grunt.file.readJSON('config/grunt_settings.json'),
 
     deployments: {
       options:{
@@ -14,19 +17,19 @@ module.exports = function(grunt) {
       },
       local:{
         "title": "Local",
-        "database": "<%- settings.db.local.database %>",
-        "user": "<%- settings.db.local.user %>",
-        "pass": "<%- settings.db.local.pass %>",
-        "host": "<%- settings.db.local.host %>",
+        "database": settings.db.local.database,
+        "user": settings.db.local.user,
+        "pass": settings.db.local.pass,
+        "host": settings.db.local.host,
         // note that the `local` target does not have an "ssh_host"
       },
       staging:{
         "title": "Staging",
-        "database": "",
-        "user": "",
-        "pass": "",
-        "host": "",
-        "ssh_host": "root@0.0.0.0.0 -p 1234"
+        "database": settings.db.staging.database,
+        "user": settings.db.staging.user,
+        "pass": settings.db.staging.pass,
+        "host": settings.db.staging.host,
+        "ssh_host": "root@198.58.109.239 -p 24"
       },
       production:{
         "title": "Production",

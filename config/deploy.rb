@@ -6,15 +6,14 @@ end
 
 if !env.nil? && env == "production" then
 
-
 else
 
   set :application, "staging.authenticff.com"
   set :deploy_to, "/var/www/#{application}"
 
-  # set :user, ""
-  # set :password, ""
-  # set :use_sudo, false
+  set :user, 'root'
+  set :password, 'NJLinHV9gW7jUz'
+  set :port, 24
 
   role :app, "198.58.109.239"
   role :web, "198.58.109.239"
@@ -27,7 +26,7 @@ end
 default_run_options[:pty] = true
 
 # the git-clone url for your repository
-set :repository, ""
+set :repository, "git@codebasehq.com:thegoodlab/authentic-ff/website.git"
 
 # Additional SCM settings
 set :scm, :git
@@ -39,7 +38,7 @@ set :copy_compression, :bz2
 
 # Deployment process
 after "deploy:update", "deploy:cleanup"
-after "deploy", "deploy:create_symlinks", "deploy:set_permissions", "deploy:remove_files"
+after "deploy", "deploy:create_symlinks", "deploy:configure_files"
 
 # Custom deployment tasks
 namespace :deploy do
@@ -58,9 +57,11 @@ namespace :deploy do
     # run "ln -s #{deploy_to}/#{shared_dir}/images #{current_release}"
   end
 
-  desc "Remove files after deployment"
-  task :remove_files, :roles => :web do
-    # run "rm #{deploy_to}/current/config/deploy.rb"
+  desc "Configure files after deployment"
+  task :configure_files, :roles => :web do
+    run "rm -R #{deploy_to}/current/config"
+    run "chmod -R 777 #{deploy_to}/current/craft/storage"
+    run "chmod -R 755 #{deploy_to}/current/craft/config"
   end
 
 end
