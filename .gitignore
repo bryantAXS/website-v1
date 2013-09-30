@@ -17,6 +17,8 @@ bower_modules
 /assets/styles/sass/_foundation*
 /assets/styles/sass/_normalize*
 
+/craft/config/local/db.php
+
 
 
 
