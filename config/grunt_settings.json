@@ -1,9 +1,9 @@
 {
   "db": {
     "local":{
-      "database": "authenticff-website",
+      "database": "authff",
       "user": "root",
-      "pass": "root",
+      "pass": "limberg6g3",
       "host": "localhost"
     },
     "staging":{

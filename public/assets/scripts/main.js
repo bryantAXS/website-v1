@@ -12,11 +12,19 @@ require.config( {
   paths:{
     "jquery": "vendor/jquery",
     "underscore": "vendor/underscore",
+    "backstretch": "plugins/backstretch",
+    "sitewide": "plugins/sitewide"
   },
 
   shim: {
     'underscore': {
       exports: "_"
+    },
+    'backstretch': {
+      deps: ['jquery']
+    },
+    'sitewide': {
+      deps: ['jquery']
     }
   }
 
@@ -26,8 +34,12 @@ require.config( {
 require([
   "jquery",
   "underscore",
+  "sitewide",
   "classes/sitewide"
   ], function($, _, Sitewide){
+
+    var sitewide = new Sitewide();
+    sitewide.init();
 
     // Intantiating template js
     var template_name = $("[data-template]").data("template");
