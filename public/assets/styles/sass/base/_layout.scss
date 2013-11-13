@@ -1,1 +1,12 @@
+html {
+  -webkit-font-smoothing: antialiased;
+}
 
+body{
+  background-color: $black;
+  color: $white;
+}
+
+[class*="column"] + [class*="column"]:last-child {
+  float: left;
+}
