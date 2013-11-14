@@ -54,6 +54,7 @@ module.exports = function(grunt) {
           {expand: true, flatten: false, cwd: "bower_components/jquery", src: 'jquery.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
           {expand: true, flatten: false, cwd: "bower_components/requirejs", src: 'require.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
           {expand: true, flatten: false, cwd: "bower_components/underscore", src: 'underscore.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
+
         ]
       }
     },

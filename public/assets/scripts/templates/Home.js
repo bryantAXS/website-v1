@@ -11,7 +11,7 @@ define([
 
     var self = this;
 
-    $(".hero").backstretch("/assets/images/bg-hero.jpg");
+    $(".hero").backstretch("/assets/images/bg-hero.png");
 
   };
 

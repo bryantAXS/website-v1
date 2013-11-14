@@ -1,48 +1,76 @@
 /* hero */
 
 .hero{
-  background-color: $grey;
-  height: 750px;
 
-  .logo{
-    display: inline-block;
-    height: 104px;
-    position: relative;
-    top: 200px;
-    width: 270px;
+  position:relative;
+  height:820px;
+
+  .hero-content-container{
+    height:200px;
+    left:50%;
+    margin:-100px 0 0 -260px;
+    position:absolute;
+    top:50%;
+    width:580px;
   }
 
-  nav{
+  .logo{
+    width:330px;
+  }
+
+  .hero-navs-container{
+    margin-top:40px;
+  }
+
+  .main-nav{
+
+    border-top: 1px solid $white;
+    float:left;
+    padding-top:8px;
 
     li{
-      float: left;
-      list-style-type: none;
-      margin-right: 10px;
+
+      float:left;
+      list-style-type:none;
 
       a{
-        color: $white;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        @include font("FuturaBold", 12px, 18px);
+        color:$white;
+        @include font("FuturaBold", 12px);
+        @include transition(color 150ms linear);
 
         &:hover{
-          color: $gold;
+          color:$gold;
         }
+      }
 
+      &+li{
+        margin-left:30px;
       }
 
     }
 
   }
 
-  .hero-social{
-    border-top: 1px solid $white;
+  .social-nav{
 
-    a{
-      display: block;
-      float: left;
-      margin-right: 10px;
-      padding-top: 10px;
+    @extend .main-nav;
+
+    float:left;
+    margin-left:15px;
+
+    li{
+
+      position:relative;
+      top:3px;
+
+      a{
+        font-size:16px;
+      }
+
+      &+li{
+        margin-left:12px;
+      }
+
     }
 
   }

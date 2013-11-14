@@ -10,3 +10,8 @@ body{
 [class*="column"] + [class*="column"]:last-child {
   float: left;
 }
+
+.hero{
+  height:820px;
+  position:relative;
+}
