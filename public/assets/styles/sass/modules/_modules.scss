@@ -80,6 +80,7 @@
 /* overview */
 
 .overview{
+
   background-color: $black;
   padding: 100px 0;
 
@@ -87,8 +88,10 @@
     @include font("EdmondsansRegular", 17px, 31px);
   }
 
-  .overview-buckets{
-    margin-top: 80px;
+  .overview-bucket{
+
+    margin-bottom:80px;
+    margin-top:80px;
 
     .large-4{
 

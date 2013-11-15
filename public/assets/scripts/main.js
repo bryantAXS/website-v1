@@ -13,7 +13,9 @@ require.config( {
     "jquery": "vendor/jquery",
     "underscore": "vendor/underscore",
     "backstretch": "plugins/backstretch",
-    "sitewide": "plugins/sitewide"
+    "sitewide": "plugins/sitewide",
+    "transit": "vendor/jquery.transit",
+    "easing": "vendor/jquery.easing"
   },
 
   shim: {
@@ -25,6 +27,9 @@ require.config( {
     },
     'sitewide': {
       deps: ['jquery']
+    },
+    'transit': {
+      deps: ['jquery', 'easing']
     }
   }
 

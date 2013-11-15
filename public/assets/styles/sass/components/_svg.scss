@@ -1,7 +1,10 @@
 
-.svg-depth-container{
+.depth-row{
 
-  height:240px;
+  .large-8{
+    min-height:240px;
+    text-align:center;
+  }
 
   .mock{
     position:absolute;
@@ -9,6 +12,14 @@
     top:-93px;
     opacity:0.3;
   }
+
+  .guy{
+    position:relative;
+    top:50%;
+    width:112px;
+  }
+
+  // Design
 
   .wireframe-1{
     left: 50%;
@@ -68,13 +79,7 @@
   }
 
 
-  .guy{
-    left:50%;
-    top: 50%;
-    margin: -61.5px 0 0 -56px;
-    position:absolute;
-    width:112px;
-  }
+  // Dev
 
   .terminal{
     position: absolute;
@@ -103,7 +108,10 @@
 }
 
 
-.svg-process-container{
+.process-row{
+
+  padding-bottom:70px;
+  padding-top:70px;
 
   .circle{
     width:350px;
@@ -119,11 +127,8 @@
     width:350px;
     z-index:2;
 
-    @include transition(all 1s ease-in-out);
-
     img{
       @include opacity(1);
-      @include transition(all 1s ease-in-out);
     }
 
   }
@@ -160,78 +165,60 @@
     width:120px;
   }
 
-  &.is-planning{
-    .objects-container{
-      @include rotate(0deg);
-    }
-    .planning{
-      @include opacity(1);
-      @include rotate(0deg);
-    }
-    .design{
-      @include rotate(0deg);
-    }
-    .code{
-      @include rotate(0deg);
-    }
-    .launch{
-      @include rotate(0deg);
-    }
+  .title-container{
+    height:350px;
+    left:0.9375em;
+    position:absolute;
+    top:0;
+    width:350px;
+    z-index:3;
   }
 
-  &.is-designing{
-    .objects-container{
-      @include rotate(90deg);
-    }
-    .planning{
-      @include rotate(-90deg);
-    }
-    .design{
-      @include rotate(-90deg);
-    }
-    .code{
-      @include rotate(-90deg);
-    }
-    .launch{
-      @include rotate(-90deg);
-    }
+  .process-title{
+    color:$gold;
+    left:50%;
+    position:absolute;
+    margin: -14px 0 0 -100px;
+    top:50%;
+    text-align:center;
+    width:200px;
+    @include font("FuturaBold", 14px)
   }
 
-  &.is-coding{
-    .objects-container{
-      @include rotate(180deg);
-    }
-    .planning{
-      @include rotate(-180deg);
-    }
-    .design{
-      @include rotate(-180deg);
-    }
-    .code{
-      @include rotate(-180deg);
-    }
-    .launch{
-      @include rotate(-180deg);
-    }
+
+}
+
+
+.belief-row{
+
+  .large-8{
+    text-align:center;
   }
 
-  &.is-launching{
-    .objects-container{
-      @include rotate(270deg);
+  .screen-container{
+    background-color: transparent;
+    height: 177px;
+    left: 50%;
+    margin-left: -157px;
+    overflow:hidden;
+    position: absolute;
+    top: 18px;
+    width: 315px;
+    z-index: 2;
+
+    img{
+      position:absolute;
+      right: -100%;
+      top:20px;
+      width:215px;
     }
-    .planning{
-      @include rotate(-270deg);
-    }
-    .design{
-      @include rotate(-270deg);
-    }
-    .code{
-      @include rotate(-270deg);
-    }
-    .launch{
-      @include rotate(-270deg);
-    }
+
   }
 
+  .monitor{
+    position:relative;
+    width:350px;
+    z-index:1;
+  }
 
 }

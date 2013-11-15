@@ -46,14 +46,17 @@ module.exports = function(grunt) {
         files: [
 
           // Foundation
-          {cwd: "bower_components/foundation/js", src: '**', dest: 'public/assets/scripts/vendor', expand: true, flatten: false},
-          {cwd: "bower_components/foundation/scss/foundation", src: '**', dest: 'public/assets/styles/sass/foundation', expand: true, flatten: false},
-          {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "bower_components/foundation/scss", src: 'foundation.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
-          {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "bower_components/foundation/scss", src: 'normalize.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
+          // {cwd: "bower_components/foundation/js", src: '**', dest: 'public/assets/scripts/vendor', expand: true, flatten: false},
+          // {cwd: "bower_components/foundation/scss/foundation", src: '**', dest: 'public/assets/styles/sass/foundation', expand: true, flatten: false},
+          // {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "bower_components/foundation/scss", src: 'foundation.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
+          // {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "bower_components/foundation/scss", src: 'normalize.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
 
           {expand: true, flatten: false, cwd: "bower_components/jquery", src: 'jquery.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
           {expand: true, flatten: false, cwd: "bower_components/requirejs", src: 'require.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
           {expand: true, flatten: false, cwd: "bower_components/underscore", src: 'underscore.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
+
+          {expand: true, flatten: false, cwd: "bower_components/jquery.transit", src: 'jquery.transit.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
+          {expand: true, flatten: false, cwd: "bower_components/jquery.easing/js", src: 'jquery.easing.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
 
         ]
       }
