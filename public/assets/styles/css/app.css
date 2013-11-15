@@ -6102,13 +6102,13 @@ a.th {
   .f-dropdown.large {
     max-width: 800px; }
 
-/* line 37, ../sass/base/_config.scss */
+/* line 100, ../sass/base/_config.scss */
 .clearfix:before,
 .clearfix:after {
   content: "";
   display: table; }
 
-/* line 42, ../sass/base/_config.scss */
+/* line 105, ../sass/base/_config.scss */
 .clearfix:after {
   clear: both; }
 
@@ -6124,11 +6124,6 @@ body {
 /* line 10, ../sass/base/_layout.scss */
 [class*="column"] + [class*="column"]:last-child {
   float: left; }
-
-/* line 14, ../sass/base/_layout.scss */
-.hero {
-  height: 820px;
-  position: relative; }
 
 /* line 1, ../sass/base/_typography.scss */
 h1 {
@@ -6499,6 +6494,292 @@ html:hover [class^="ss-"] {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
+/* line 2, ../sass/components/_svg.scss */
+.svg-depth-container {
+  height: 240px; }
+  /* line 6, ../sass/components/_svg.scss */
+  .svg-depth-container .mock {
+    position: absolute;
+    left: 34px;
+    top: -93px;
+    opacity: 0.3; }
+  /* line 13, ../sass/components/_svg.scss */
+  .svg-depth-container .wireframe-1 {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 66px;
+    margin: -30px 0 0 -214px; }
+  /* line 21, ../sass/components/_svg.scss */
+  .svg-depth-container .wireframe-2 {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 66px;
+    margin: -21px 0 0 -227px;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+    opacity: 0.7; }
+  /* line 30, ../sass/components/_svg.scss */
+  .svg-depth-container .pencil {
+    left: 50%;
+    margin: -32px 0 0 -125px;
+    position: absolute;
+    top: 50%;
+    width: 5px; }
+  /* line 38, ../sass/components/_svg.scss */
+  .svg-depth-container .ruler {
+    left: 50%;
+    margin: -30.5px 0 0 -112px;
+    position: absolute;
+    top: 50%;
+    width: 11px; }
+  /* line 46, ../sass/components/_svg.scss */
+  .svg-depth-container .notebook {
+    left: 50%;
+    margin: -138px 0 0 -179px;
+    position: absolute;
+    top: 50%;
+    width: 58px; }
+  /* line 54, ../sass/components/_svg.scss */
+  .svg-depth-container .pen {
+    left: 50%;
+    margin: -110px 0 0 -193px;
+    position: absolute;
+    top: 50%;
+    width: 5px; }
+  /* line 62, ../sass/components/_svg.scss */
+  .svg-depth-container .flashdrive {
+    left: 50%;
+    margin: -77px 0 0 -209px;
+    position: absolute;
+    top: 50%;
+    width: 10px; }
+  /* line 71, ../sass/components/_svg.scss */
+  .svg-depth-container .guy {
+    left: 50%;
+    top: 50%;
+    margin: -61.5px 0 0 -56px;
+    position: absolute;
+    width: 112px; }
+  /* line 79, ../sass/components/_svg.scss */
+  .svg-depth-container .terminal {
+    position: absolute;
+    left: 50%;
+    margin: -11px 0 0 94px;
+    top: 50%;
+    width: 72px; }
+  /* line 87, ../sass/components/_svg.scss */
+  .svg-depth-container .code {
+    position: absolute;
+    left: 50%;
+    margin: 58.5px 0 0 117px;
+    top: 50%;
+    width: 80px; }
+  /* line 95, ../sass/components/_svg.scss */
+  .svg-depth-container .computer {
+    position: absolute;
+    left: 50%;
+    margin: -38.5px 0 0 189px;
+    top: 50%;
+    width: 112px; }
+
+/* line 108, ../sass/components/_svg.scss */
+.svg-process-container .circle {
+  width: 350px;
+  z-index: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4; }
+/* line 114, ../sass/components/_svg.scss */
+.svg-process-container .objects-container {
+  height: 350px;
+  position: absolute;
+  left: 0.9375em;
+  top: 0;
+  width: 350px;
+  z-index: 2;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out; }
+  /* line 124, ../sass/components/_svg.scss */
+  .svg-process-container .objects-container img {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out; }
+/* line 131, ../sass/components/_svg.scss */
+.svg-process-container .planning {
+  position: absolute;
+  left: 50%;
+  margin: -70px 0 0 -60px;
+  top: 0;
+  width: 120px; }
+/* line 139, ../sass/components/_svg.scss */
+.svg-process-container .design {
+  position: absolute;
+  left: 0;
+  margin: -68.5px 0 0 -60px;
+  top: 50%;
+  width: 120px; }
+/* line 147, ../sass/components/_svg.scss */
+.svg-process-container .code {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  margin: 0 0 -68.5px -60px;
+  width: 120px; }
+/* line 155, ../sass/components/_svg.scss */
+.svg-process-container .launch {
+  position: absolute;
+  right: 0;
+  margin: -68.5px -60px 0 0;
+  top: 50%;
+  width: 120px; }
+/* line 164, ../sass/components/_svg.scss */
+.svg-process-container.is-planning .objects-container {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg); }
+/* line 167, ../sass/components/_svg.scss */
+.svg-process-container.is-planning .planning {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg); }
+/* line 171, ../sass/components/_svg.scss */
+.svg-process-container.is-planning .design {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg); }
+/* line 174, ../sass/components/_svg.scss */
+.svg-process-container.is-planning .code {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg); }
+/* line 177, ../sass/components/_svg.scss */
+.svg-process-container.is-planning .launch {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg); }
+/* line 183, ../sass/components/_svg.scss */
+.svg-process-container.is-designing .objects-container {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg); }
+/* line 186, ../sass/components/_svg.scss */
+.svg-process-container.is-designing .planning {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+/* line 189, ../sass/components/_svg.scss */
+.svg-process-container.is-designing .design {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+/* line 192, ../sass/components/_svg.scss */
+.svg-process-container.is-designing .code {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+/* line 195, ../sass/components/_svg.scss */
+.svg-process-container.is-designing .launch {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+/* line 201, ../sass/components/_svg.scss */
+.svg-process-container.is-coding .objects-container {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg); }
+/* line 204, ../sass/components/_svg.scss */
+.svg-process-container.is-coding .planning {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+/* line 207, ../sass/components/_svg.scss */
+.svg-process-container.is-coding .design {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+/* line 210, ../sass/components/_svg.scss */
+.svg-process-container.is-coding .code {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+/* line 213, ../sass/components/_svg.scss */
+.svg-process-container.is-coding .launch {
+  -webkit-transform: rotate(-180deg);
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  transform: rotate(-180deg); }
+/* line 219, ../sass/components/_svg.scss */
+.svg-process-container.is-launching .objects-container {
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg); }
+/* line 222, ../sass/components/_svg.scss */
+.svg-process-container.is-launching .planning {
+  -webkit-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  transform: rotate(-270deg); }
+/* line 225, ../sass/components/_svg.scss */
+.svg-process-container.is-launching .design {
+  -webkit-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  transform: rotate(-270deg); }
+/* line 228, ../sass/components/_svg.scss */
+.svg-process-container.is-launching .code {
+  -webkit-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  transform: rotate(-270deg); }
+/* line 231, ../sass/components/_svg.scss */
+.svg-process-container.is-launching .launch {
+  -webkit-transform: rotate(-270deg);
+  -moz-transform: rotate(-270deg);
+  -ms-transform: rotate(-270deg);
+  -o-transform: rotate(-270deg);
+  transform: rotate(-270deg); }
+
 /* hero */
 /* line 3, ../sass/modules/_modules.scss */
 .hero {
@@ -6575,48 +6856,48 @@ html:hover [class^="ss-"] {
     margin-top: 80px; }
 
 /* work */
-/* line 98, ../sass/modules/_modules.scss */
+/* line 107, ../sass/modules/_modules.scss */
 .work {
   background-color: #2f3633;
   padding: 100px 0; }
 
 /* about */
-/* line 106, ../sass/modules/_modules.scss */
+/* line 115, ../sass/modules/_modules.scss */
 .about {
   background-color: #1b1f1d;
   padding: 100px 0; }
-  /* line 110, ../sass/modules/_modules.scss */
+  /* line 119, ../sass/modules/_modules.scss */
   .about img {
     margin-bottom: 45px; }
-  /* line 114, ../sass/modules/_modules.scss */
+  /* line 123, ../sass/modules/_modules.scss */
   .about h2 {
     color: white;
     margin-bottom: 0px; }
-  /* line 119, ../sass/modules/_modules.scss */
+  /* line 128, ../sass/modules/_modules.scss */
   .about h3 {
     margin-bottom: 20px; }
-  /* line 123, ../sass/modules/_modules.scss */
+  /* line 132, ../sass/modules/_modules.scss */
   .about .social {
     padding: 30px 0; }
-    /* line 126, ../sass/modules/_modules.scss */
+    /* line 135, ../sass/modules/_modules.scss */
     .about .social a {
       display: block;
       float: left;
       margin-right: 10px; }
-  /* line 134, ../sass/modules/_modules.scss */
+  /* line 143, ../sass/modules/_modules.scss */
   .about .last-played {
     margin-top: 30px; }
 
 /* contact */
-/* line 143, ../sass/modules/_modules.scss */
+/* line 152, ../sass/modules/_modules.scss */
 .contact {
   background-color: #2f3633;
   padding: 100px 0; }
-  /* line 147, ../sass/modules/_modules.scss */
+  /* line 156, ../sass/modules/_modules.scss */
   .contact .office,
   .contact .hiring {
     margin-top: 10px; }
-  /* line 152, ../sass/modules/_modules.scss */
+  /* line 161, ../sass/modules/_modules.scss */
   .contact .email-wrap {
     font-weight: bold;
     margin-top: 30px; }

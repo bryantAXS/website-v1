@@ -1,0 +1,237 @@
+
+.svg-depth-container{
+
+  height:240px;
+
+  .mock{
+    position:absolute;
+    left:34px;
+    top:-93px;
+    opacity:0.3;
+  }
+
+  .wireframe-1{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 66px;
+    margin: -30px 0 0 -214px;
+  }
+
+  .wireframe-2{
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    width: 66px;
+    margin: -21px 0 0 -227px;
+    @include opacity(.7);
+  }
+
+  .pencil{
+    left: 50%;
+    margin: -32px 0 0 -125px;
+    position: absolute;
+    top: 50%;
+    width: 5px;
+  }
+
+  .ruler{
+    left: 50%;
+    margin: -30.5px 0 0 -112px;
+    position: absolute;
+    top: 50%;
+    width: 11px;
+  }
+
+  .notebook{
+    left: 50%;
+    margin: -138px 0 0 -179px;
+    position: absolute;
+    top: 50%;
+    width: 58px;
+  }
+
+  .pen{
+    left: 50%;
+    margin: -110px 0 0 -193px;
+    position: absolute;
+    top: 50%;
+    width: 5px;
+  }
+
+  .flashdrive{
+    left: 50%;
+    margin: -77px 0 0 -209px;
+    position: absolute;
+    top: 50%;
+    width: 10px;
+  }
+
+
+  .guy{
+    left:50%;
+    top: 50%;
+    margin: -61.5px 0 0 -56px;
+    position:absolute;
+    width:112px;
+  }
+
+  .terminal{
+    position: absolute;
+    left: 50%;
+    margin: -11px 0 0 94px;
+    top: 50%;
+    width: 72px;
+  }
+
+  .code{
+    position: absolute;
+    left: 50%;
+    margin: 58.5px 0 0 117px;
+    top: 50%;
+    width: 80px;
+  }
+
+  .computer{
+    position: absolute;
+    left: 50%;
+    margin: -38.5px 0 0 189px;
+    top: 50%;
+    width: 112px;
+  }
+
+}
+
+
+.svg-process-container{
+
+  .circle{
+    width:350px;
+    z-index:1;
+    @include opacity(0.4);
+  }
+
+  .objects-container{
+    height:350px;
+    position:absolute;
+    left:0.9375em;
+    top:0;
+    width:350px;
+    z-index:2;
+
+    @include transition(all 1s ease-in-out);
+
+    img{
+      @include opacity(1);
+      @include transition(all 1s ease-in-out);
+    }
+
+  }
+
+  .planning{
+    position:absolute;
+    left:50%;
+    margin: -70px 0 0 -60px;
+    top:0;
+    width:120px;
+  }
+
+  .design{
+    position:absolute;
+    left:0;
+    margin: -68.5px 0 0 -60px;
+    top:50%;
+    width:120px;
+  }
+
+  .code{
+    position:absolute;
+    bottom:0;
+    left:50%;
+    margin: 0 0 -68.5px -60px;
+    width:120px;
+  }
+
+  .launch{
+    position:absolute;
+    right:0;
+    margin: -68.5px -60px 0 0;
+    top:50%;
+    width:120px;
+  }
+
+  &.is-planning{
+    .objects-container{
+      @include rotate(0deg);
+    }
+    .planning{
+      @include opacity(1);
+      @include rotate(0deg);
+    }
+    .design{
+      @include rotate(0deg);
+    }
+    .code{
+      @include rotate(0deg);
+    }
+    .launch{
+      @include rotate(0deg);
+    }
+  }
+
+  &.is-designing{
+    .objects-container{
+      @include rotate(90deg);
+    }
+    .planning{
+      @include rotate(-90deg);
+    }
+    .design{
+      @include rotate(-90deg);
+    }
+    .code{
+      @include rotate(-90deg);
+    }
+    .launch{
+      @include rotate(-90deg);
+    }
+  }
+
+  &.is-coding{
+    .objects-container{
+      @include rotate(180deg);
+    }
+    .planning{
+      @include rotate(-180deg);
+    }
+    .design{
+      @include rotate(-180deg);
+    }
+    .code{
+      @include rotate(-180deg);
+    }
+    .launch{
+      @include rotate(-180deg);
+    }
+  }
+
+  &.is-launching{
+    .objects-container{
+      @include rotate(270deg);
+    }
+    .planning{
+      @include rotate(-270deg);
+    }
+    .design{
+      @include rotate(-270deg);
+    }
+    .code{
+      @include rotate(-270deg);
+    }
+    .launch{
+      @include rotate(-270deg);
+    }
+  }
+
+
+}
