@@ -7,10 +7,8 @@ define([
 
     this.$screenContainer = $(".screen-container");
     this.$monitor = $(".belief-row .monitor");
-    this.$allDocs = $(".belief-row .screen-container img");
+    this.$allDocs = $(".belief-row .screen-container img").not(".chat");
     this.$plannDoc = $(".belief-row .planning");
-
-    console.log(this.$allDocs);
 
     this.currentDocIndex = 0;
 
@@ -31,28 +29,46 @@ define([
   BeliefIllustration.prototype.run = function(){
 
     var self = this;
-    var $nextDoc = this.getNextDoc();
-    var $currentDoc = this.getCurrentDoc();
 
-    this.animatedDocOutPromise = new $.Deferred();
-    this.animatedDocInPromise = new $.Deferred();
+    this.animateOutPromise = new $.Deferred();
+    this.animateInPromise = new $.Deferred();
 
-    if($currentDoc){
-      this.animateDocOut($currentDoc);
+    var $currentImage = this.getCurrentImage();
+
+
+    if($currentImage){
+      if($currentImage.hasClass("chat")){
+        var $nextImage = this.getNextDoc();
+        var nextIsDoc = true;
+      }else{
+        var $nextImage = $(".screen-container .chat");
+        var nextIsDoc = false;
+      }
     }else{
-      this.animatedDocOutPromise.resolve();
+      var $nextImage = this.getNextDoc();
+      var nextIsDoc = true;
     }
 
-    this.animatedDocOutPromise.done(function(){
-      self.animateDocIn($nextDoc);
+    if($currentImage){
+      this.animateOut($currentImage);
+    }else{
+      this.animateOutPromise.resolve();
+    }
+
+    this.animateOutPromise.done(function(){
+      self.animateIn($nextImage);
     });
 
-    this.animatedDocInPromise.done(function(){
+    this.animateInPromise.done(function(){
 
-      self.currentDocIndex += 1;
+      if(nextIsDoc){
 
-      if(self.currentDocIndex === 4){
-        self.currentDocIndex = 0;
+        self.currentDocIndex += 1;
+
+        if(self.currentDocIndex === 4){
+          self.currentDocIndex = 0;
+        }
+
       }
 
     })
@@ -60,42 +76,95 @@ define([
   };
 
   BeliefIllustration.prototype.getNextDoc = function(){
+
     return $(this.$allDocs.get(this.currentDocIndex));
+
   };
 
-  BeliefIllustration.prototype.getCurrentDoc = function(){
+  BeliefIllustration.prototype.getCurrentImage = function(){
 
-    var $currentDoc = $(".belief-row .currentDoc");
+    var $currentImage = $(".belief-row .currentImage");
 
-    if($currentDoc.length){
-      return $currentDoc;
+    if($currentImage.length){
+      return $currentImage;
     }else{
       return false;
     }
 
   };
 
-  BeliefIllustration.prototype.getScreenWidth = function(){
-    return this.$screenContainer.width();
-  };
+  BeliefIllustration.prototype.animateOut = function($currentImage){
+    if($currentImage.hasClass("chat")){
+      this.animateChatOut($currentImage);
+    }else{
+      this.animateDocOut($currentImage);
+    }
+  }
 
-  BeliefIllustration.prototype.animateDocOut = function($currentDoc){
+  BeliefIllustration.prototype.animateIn = function($currentImage){
+    if($currentImage.hasClass("chat")){
+      this.animateChatIn($currentImage);
+    }else{
+      this.animateDocIn($currentImage);
+    }
+  }
+
+  BeliefIllustration.prototype.animateChatIn = function($nextImage){
 
     var self = this;
-    var docWidth = $currentDoc.width();
     var screenWidth = this.$screenContainer.width();
-    var endRight = screenWidth + docWidth + 20;
+    var startingImageWidth = 0;
+    var startingImageOpacity = 0;
+    var startingImageMarginTop = 0;
+    var startingImageMartinLeft = 0;
 
-    $currentDoc.transition({
-      right: endRight
+    var endingImageWidth = screenWidth / 4;
+    var endingImageHeight = endingImageWidth / 1.77;
+    var endingImageOpacity = 1;
+    var endingImageMarginTop = -(endingImageHeight/2);
+    var endingImageMarginLeft = -(endingImageWidth/2);
+
+    $nextImage.css(
+      {
+        left: "50%",
+        top: "50%",
+        width: startingImageWidth,
+        opacity: startingImageOpacity,
+        marginLeft: startingImageMartinLeft,
+        marginTop: startingImageMarginTop
+      }
+    );
+
+    $nextImage.transition(
+      {
+        width: endingImageWidth,
+        opacity: endingImageOpacity,
+        marginLeft: endingImageMarginLeft,
+        marginTop: endingImageMarginLeft
+      }
+      , 750, "easeInOutBack", function(){
+      $nextImage.addClass("currentImage");
+      self.animateInPromise.resolve();
+    });
+
+  };
+
+  BeliefIllustration.prototype.animateChatOut = function($currentImage){
+
+    var self = this;
+
+    $currentImage.transition({
+      opacity: 0
     }, 750, "easeInOutBack", function(){
-      $currentDoc.removeClass("currentDoc");
-      self.animatedDocOutPromise.resolve();
+      $currentImage.removeClass("currentImage");
+      self.animateOutPromise.resolve();
     });
 
   };
 
   BeliefIllustration.prototype.animateDocIn = function($nextDoc){
+
+    console.log("3");
 
     var self = this;
     var docWidth = $nextDoc.width();
@@ -107,10 +176,32 @@ define([
     $nextDoc.transition({
       right: endRight
     }, 750, "easeInOutBack", function(){
-      $nextDoc.addClass("currentDoc");
-      self.animatedDocInPromise.resolve();
+      $nextDoc.addClass("currentImage");
+      self.animateInPromise.resolve();
     });
 
+  };
+
+  BeliefIllustration.prototype.animateDocOut = function($currentDoc){
+
+    console.log("4");
+
+    var self = this;
+    var docWidth = $currentDoc.width();
+    var screenWidth = this.$screenContainer.width();
+    var endRight = screenWidth + docWidth + 20;
+
+    $currentDoc.transition({
+      right: endRight
+    }, 750, "easeInOutBack", function(){
+      $currentDoc.removeClass("currentImage");
+      self.animateOutPromise.resolve();
+    });
+
+  };
+
+  BeliefIllustration.prototype.getScreenWidth = function(){
+    return this.$screenContainer.width();
   };
 
   return BeliefIllustration;

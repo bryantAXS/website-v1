@@ -56,7 +56,7 @@ define([
       self.changeProcess();
     };
 
-    setInterval(cb, 5000);
+    setInterval(cb, 4000);
 
   };
 

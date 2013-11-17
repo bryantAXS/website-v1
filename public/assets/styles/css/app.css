@@ -6654,31 +6654,115 @@ html:hover [class^="ss-"] {
     line-height: 20px;
     font-weight: 300; }
 
-/* line 194, ../sass/components/_svg.scss */
-.belief-row .large-8 {
-  text-align: center; }
-/* line 198, ../sass/components/_svg.scss */
-.belief-row .screen-container {
-  background-color: transparent;
-  height: 177px;
-  left: 50%;
-  margin-left: -157px;
-  overflow: hidden;
-  position: absolute;
-  top: 18px;
-  width: 315px;
-  z-index: 2; }
-  /* line 209, ../sass/components/_svg.scss */
-  .belief-row .screen-container img {
+/* line 192, ../sass/components/_svg.scss */
+.belief-row {
+  @-o-keyframes bounce {
+    /* line 225, ../sass/components/_svg.scss */
+    from {
+      -webkit-transform: rotate("-30deg");
+      -moz-transform: rotate("-30deg");
+      -ms-transform: rotate("-30deg");
+      -o-transform: rotate("-30deg");
+      transform: rotate("-30deg"); }
+
+    /* line 228, ../sass/components/_svg.scss */
+    to {
+      -webkit-transform: rotate("30deg");
+      -moz-transform: rotate("30deg");
+      -ms-transform: rotate("30deg");
+      -o-transform: rotate("30deg");
+      transform: rotate("30deg"); } }
+
+  @-moz-keyframes bounce {
+    /* line 225, ../sass/components/_svg.scss */
+    from {
+      -webkit-transform: rotate("-30deg");
+      -moz-transform: rotate("-30deg");
+      -ms-transform: rotate("-30deg");
+      -o-transform: rotate("-30deg");
+      transform: rotate("-30deg"); }
+
+    /* line 228, ../sass/components/_svg.scss */
+    to {
+      -webkit-transform: rotate("30deg");
+      -moz-transform: rotate("30deg");
+      -ms-transform: rotate("30deg");
+      -o-transform: rotate("30deg");
+      transform: rotate("30deg"); } }
+
+  @-webkit-keyframes bounce {
+    /* line 225, ../sass/components/_svg.scss */
+    from {
+      -webkit-transform: rotate("-30deg");
+      -moz-transform: rotate("-30deg");
+      -ms-transform: rotate("-30deg");
+      -o-transform: rotate("-30deg");
+      transform: rotate("-30deg"); }
+
+    /* line 228, ../sass/components/_svg.scss */
+    to {
+      -webkit-transform: rotate("30deg");
+      -moz-transform: rotate("30deg");
+      -ms-transform: rotate("30deg");
+      -o-transform: rotate("30deg");
+      transform: rotate("30deg"); } }
+
+  @-keyframes bounce {
+    /* line 225, ../sass/components/_svg.scss */
+    from {
+      -webkit-transform: rotate("-30deg");
+      -moz-transform: rotate("-30deg");
+      -ms-transform: rotate("-30deg");
+      -o-transform: rotate("-30deg");
+      transform: rotate("-30deg"); }
+
+    /* line 228, ../sass/components/_svg.scss */
+    to {
+      -webkit-transform: rotate("30deg");
+      -moz-transform: rotate("30deg");
+      -ms-transform: rotate("30deg");
+      -o-transform: rotate("30deg");
+      transform: rotate("30deg"); } }
+ }
+  /* line 194, ../sass/components/_svg.scss */
+  .belief-row .large-8 {
+    text-align: center; }
+  /* line 198, ../sass/components/_svg.scss */
+  .belief-row .screen-container {
+    background-color: transparent;
+    height: 177px;
+    left: 50%;
+    margin-left: -157px;
+    overflow: hidden;
     position: absolute;
-    right: -100%;
-    top: 20px;
-    width: 215px; }
-/* line 218, ../sass/components/_svg.scss */
-.belief-row .monitor {
-  position: relative;
-  width: 350px;
-  z-index: 1; }
+    top: 18px;
+    width: 315px;
+    z-index: 2; }
+    /* line 209, ../sass/components/_svg.scss */
+    .belief-row .screen-container img {
+      position: absolute;
+      right: -100%;
+      top: 20px;
+      width: 215px; }
+  /* line 218, ../sass/components/_svg.scss */
+  .belief-row .monitor {
+    position: relative;
+    width: 350px;
+    z-index: 1; }
+  /* line 233, ../sass/components/_svg.scss */
+  .belief-row .chat {
+    -o-animation-name: bounce;
+    -moz-animation-name: bounce;
+    -webkit-animation-name: bounce;
+    animation-name: bounce;
+    -o-animation-duration: "1s";
+    -moz-animation-duration: "1s";
+    -webkit-animation-duration: "1s";
+    animation-duration: "1s";
+    -o-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite; }
 
 /* hero */
 /* line 3, ../sass/modules/_modules.scss */
