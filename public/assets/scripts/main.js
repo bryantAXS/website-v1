@@ -15,7 +15,8 @@ require.config( {
     "backstretch": "plugins/backstretch",
     "sitewide": "plugins/sitewide",
     "transit": "vendor/jquery.transit",
-    "easing": "vendor/jquery.easing"
+    "easing": "vendor/jquery.easing",
+    "cycle2": "plugins/cycle2"
   },
 
   shim: {
@@ -29,6 +30,9 @@ require.config( {
       deps: ['jquery']
     },
     'transit': {
+      deps: ['jquery', 'easing']
+    },
+    'cycle2': {
       deps: ['jquery', 'easing']
     }
   }

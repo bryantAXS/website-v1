@@ -20,7 +20,7 @@ define([
 
     setInterval(function(){
       self.run();
-    }, 5000);
+    }, 3000);
 
     self.run();
 
@@ -71,7 +71,7 @@ define([
 
       }
 
-    })
+    });
 
   };
 
@@ -99,7 +99,7 @@ define([
     }else{
       this.animateDocOut($currentImage);
     }
-  }
+  };
 
   BeliefIllustration.prototype.animateIn = function($currentImage){
     if($currentImage.hasClass("chat")){
@@ -107,7 +107,7 @@ define([
     }else{
       this.animateDocIn($currentImage);
     }
-  }
+  };
 
   BeliefIllustration.prototype.animateChatIn = function($nextImage){
 
@@ -127,7 +127,7 @@ define([
     $nextImage.css(
       {
         left: "50%",
-        top: "50%",
+        top: "60%",
         width: startingImageWidth,
         opacity: startingImageOpacity,
         marginLeft: startingImageMartinLeft,
@@ -141,8 +141,7 @@ define([
         opacity: endingImageOpacity,
         marginLeft: endingImageMarginLeft,
         marginTop: endingImageMarginLeft
-      }
-      , 750, "easeInOutBack", function(){
+      }, 750, "easeInOutBack", function(){
       $nextImage.addClass("currentImage");
       self.animateInPromise.resolve();
     });
@@ -164,8 +163,6 @@ define([
 
   BeliefIllustration.prototype.animateDocIn = function($nextDoc){
 
-    console.log("3");
-
     var self = this;
     var docWidth = $nextDoc.width();
     var startingRight = (docWidth * -1) - 20;
@@ -183,8 +180,6 @@ define([
   };
 
   BeliefIllustration.prototype.animateDocOut = function($currentDoc){
-
-    console.log("4");
 
     var self = this;
     var docWidth = $currentDoc.width();

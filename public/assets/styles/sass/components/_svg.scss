@@ -222,3 +222,17 @@
   }
 
 }
+
+
+@include keyframes(rotate-toggle){
+  0% {
+    @include rotate(-15deg);
+  }
+  100%{
+    @include rotate(15deg);
+  }
+}
+
+.chat{
+  @include animation(rotate-toggle 500ms linear 0 infinite alternate);
+}

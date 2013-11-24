@@ -109,7 +109,120 @@
 
 .work{
   background-color: $grey;
-  padding: 100px 0;
+}
+
+.work-title-container{
+  padding-top:100px;
+}
+
+.work-slides-container{
+
+  background-color: rgba($gold, 1) !important;
+  min-height:650px;
+  overflow:hidden;
+
+  .slide{
+    height:100%;
+    width:100%;
+  }
+
+  .small-text{
+    color:#ffe5a7;
+    display:inline-block;
+    padding: 36px 0;
+    @include font("FuturaBold", 10px);
+  }
+
+}
+
+.work-slides-navigation{
+
+  background-color:$gold;
+  height:65px;
+  position:absolute;
+  text-align:center;
+  left:0;
+  top:-65px;
+  width:100%;
+  z-index:9999999;
+
+  .arrow-left, .arrow-right{
+    color:$white;
+    font-size:11px;
+    margin-top:-1px;
+    position:absolute;
+    top:50%;
+    width:20px;
+    z-index:2;
+    @include transition(opacity 250ms linear);
+    @include opacity(0.6);
+
+    &:hover{
+      @include opacity(1);
+    }
+  }
+  .arrow-left{
+    left:20px;
+  }
+  .arrow-right{
+    right:20px;
+  }
+
+  .project{
+    color:rgba(#fff, 0.7);
+    display:inline-block;
+    @include opacity(0.6);
+    @include transition(opacity 250ms linear);
+    @include font("FuturaBold", 12px, 69px);
+
+    &+.project{
+      margin-left:20px;
+    }
+
+    &:hover{
+      @include opacity(1);
+    }
+  }
+
+
+
+}
+
+
+.slide-projects{
+
+  text-align:center;
+
+  .slide-projects-content{
+    margin-top:50%;
+    position:relative;
+    top:-61.5px;
+  }
+
+}
+
+
+.slide-browser{
+
+  .dummy{
+    @include opacity(0);
+    width:100%;
+  }
+
+  .browser-container{
+    background: transparent url(/assets/images/svg-browser.svg) no-repeat left top;
+    background-size: 100% 100%;
+    display:block;
+    margin: 15% auto 0 auto;
+    position:relative;
+    width:90%;
+  }
+
+  .browser-content{
+
+  }
+
+
 }
 
 

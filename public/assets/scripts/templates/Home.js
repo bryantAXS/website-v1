@@ -6,13 +6,17 @@ define([
   "illustrations/DepthIllustration",
   "illustrations/ProcessIllustration",
   "illustrations/BeliefIllustration",
+
+  "classes/WorkGallery"
 ], function(
   $,
   Backstretch,
   Transit,
   DepthIllustration,
   ProcessIllustration,
-  BeliefIllustration){
+  BeliefIllustration,
+  WorkGallery
+  ){
 
   var Home = function(){
 
@@ -25,6 +29,10 @@ define([
     $(".hero").backstretch("/assets/images/bg-hero.png");
 
     this.initAnimations();
+
+    var workGallery = new WorkGallery();
+    workGallery.init();
+
   };
 
   Home.prototype.initAnimations = function(){
