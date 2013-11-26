@@ -5,6 +5,11 @@ $black: #1b1f1d;
 $grey: #2f3633;
 $gold: #dec17b;
 
+// speeds
+$slow: 600ms;
+$medium: 400ms;
+$fast: 200ms;
+
 @mixin font($font-name: "Helvetica", $font-size: false, $line-height:false, $font-weight: false){
 
   font-family: $font-name;
@@ -88,13 +93,6 @@ $gold: #dec17b;
   -webkit-animation: $animation;
   animation: $animation;
 }
-
-
-
-// speeds
-$slow: 600ms;
-$medium: 400ms;
-$fast: 200ms;
 
 //clearfix
 .clearfix:before,
