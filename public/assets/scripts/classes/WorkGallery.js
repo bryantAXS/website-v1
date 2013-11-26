@@ -22,7 +22,6 @@ define([
   };
 
 
-
   /**
    * Getting things underway
    * @return {[type]} [description]
@@ -85,6 +84,11 @@ define([
 
   };
 
+
+  /**
+   * Determining what the next slide is and going to it. If there isn't one, go back home
+   * @return {[type]} [description]
+   */
   WorkGallery.prototype.gotoNextSlide = function(){
 
     var self = this;
@@ -104,10 +108,17 @@ define([
 
   };
 
+
+  /**
+   * Adjusting the active state for the project specific navigation
+   * @param {[type]} projectName  [description]
+   * @param {[type]} projectIndex [description]
+   */
   WorkGallery.prototype.setNavigation = function(projectName, projectIndex){
     $(".work-slides-navigation .project").removeClass("is-active");
     $(".work-slides-navigation .project[data-project='"+projectName+"'][data-slide='"+projectIndex+"']").addClass("is-active");
   };
+
 
   /**
    * Close all project specific navigation
@@ -116,6 +127,7 @@ define([
   WorkGallery.prototype.closeNavigation = function(){
     this.$allNavs.transition({top: -65}, 350);
   };
+
 
   /**
    * Return the absolute slide index based on a project's name and project slide index
