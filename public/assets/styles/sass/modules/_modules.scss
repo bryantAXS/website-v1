@@ -179,7 +179,7 @@
       margin-left:20px;
     }
 
-    &:hover{
+    &:hover, &.is-active{
       @include opacity(1);
     }
   }
@@ -201,6 +201,35 @@
 
 }
 
+.slide-intro{
+
+  .intro-content{
+
+    padding-top: 140px;
+    margin: 0 auto;
+    width:70%;
+
+    .title{
+      display:block;
+      // padding: 8px 0;
+      @include font("EdmondsansBold", 18px);
+    }
+
+    .subtitle{
+      display:block;
+      padding: 8px 0;
+      text-transform:uppercase;
+      @include font("FuturaBold", 12px);
+    }
+
+    p{
+      @include font("EdmondsansRegular", 14px);
+    }
+
+  }
+
+}
+
 
 .slide-browser{
 
@@ -215,13 +244,29 @@
     display:block;
     margin: 15% auto 0 auto;
     position:relative;
+    right:-40px;
     width:90%;
+    @include opacity(0);
+    @include transition(right 200ms ease-in-out, opacity 200ms ease-in-out);
   }
 
   .browser-content{
 
   }
 
+
+}
+
+.cycle-slide{
+
+}
+
+.cycle-slide-active{
+
+  .browser-container{
+    right:0;
+    @include opacity(1);
+  }
 
 }
 
@@ -246,6 +291,7 @@
   }
 
   .social{
+
     padding: 30px 0;
 
     a{
