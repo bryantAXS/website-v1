@@ -1,342 +1,155 @@
-/* hero */
+
+.bg-black{
+  background: $black url(/assets/images/bg-black.jpg) repeat top left;
+}
+
+// -----------------
+// HERO
+// -----------------
 
 .hero{
 
-  position:relative;
-  height:820px;
-
-  .hero-content-container{
-    height:200px;
-    left:50%;
-    margin:-100px 0 0 -260px;
-    position:absolute;
-    top:50%;
-    width:580px;
-  }
-
   .logo{
-    width:330px;
-  }
-
-  .hero-navs-container{
-    margin-top:40px;
-  }
-
-  .main-nav{
-
-    border-top: 1px solid $white;
-    float:left;
-    padding-top:8px;
-
-    li{
-
-      float:left;
-      list-style-type:none;
-
-      a{
-        color:$white;
-        @include font("FuturaBold", 12px);
-        @include transition(color 150ms linear);
-
-        &:hover{
-          color:$gold;
-        }
-      }
-
-      &+li{
-        margin-left:30px;
-      }
-
-    }
-
-  }
-
-  .social-nav{
-
-    @extend .main-nav;
-
-    float:left;
-    margin-left:15px;
-
-    li{
-
-      position:relative;
-      top:3px;
-
-      a{
-        font-size:16px;
-      }
-
-      &+li{
-        margin-left:12px;
-      }
-
-    }
-
-  }
-
-}
-
-
-
-
-
-
-/* overview */
-
-.overview{
-
-  background-color: $black;
-  padding: 100px 0;
-
-  p.overview-text{
-    @include font("EdmondsansRegular", 17px, 31px);
-  }
-
-  .overview-bucket{
-
-    margin-bottom:80px;
-    margin-top:80px;
-
-    .large-4{
-
-    }
-
-    .large-8{
-
-    }
-
-  }
-
-}
-
-
-
-
-
-
-/* work */
-
-.work{
-  background-color: $grey;
-}
-
-.work-title-container{
-  padding-top:100px;
-}
-
-.work-slides-container{
-
-  background-color: rgba($gold, 1) !important;
-  min-height:650px;
-  overflow:hidden;
-
-  .slide{
-    height:100%;
-    width:100%;
-  }
-
-  .small-text{
-    color:#ffe5a7;
-    display:inline-block;
-    padding: 36px 0;
-    @include font("FuturaBold", 10px);
-  }
-
-}
-
-.work-slides-navigation{
-
-  background-color:$gold;
-  height:65px;
-  position:absolute;
-  text-align:center;
-  left:0;
-  top:-65px;
-  width:100%;
-  z-index:9999999;
-
-  .arrow-left, .arrow-right{
-    color:$white;
-    font-size:11px;
-    margin-top:-1px;
-    position:absolute;
-    top:50%;
-    width:20px;
-    z-index:2;
-    @include transition(opacity 250ms linear);
-    @include opacity(0.6);
-
-    &:hover{
-      @include opacity(1);
-    }
-  }
-  .arrow-left{
-    left:20px;
-  }
-  .arrow-right{
-    right:20px;
-  }
-
-  .project{
-    color:rgba(#fff, 0.7);
-    display:inline-block;
-    @include opacity(0.6);
-    @include transition(opacity 250ms linear);
-    @include font("FuturaBold", 12px, 69px);
-
-    &+.project{
-      margin-left:20px;
-    }
-
-    &:hover, &.is-active{
-      @include opacity(1);
-    }
-  }
-
-
-
-}
-
-.slide-projects{
-
-  text-align:center;
-
-  .slide-projects-content{
-    margin-top:50%;
-    position:relative;
-    top:-61.5px;
-  }
-
-}
-
-.slide-intro{
-
-  .intro-content{
-
-    padding-top: 140px;
-    margin: 0 auto;
     width:70%;
-
-    .title{
-      display:block;
-      // padding: 8px 0;
-      @include font("EdmondsansBold", 18px);
-    }
-
-    .subtitle{
-      display:block;
-      padding: 8px 0;
-      text-transform:uppercase;
-      @include font("FuturaBold", 12px);
-    }
-
-    p{
-      @include font("EdmondsansRegular", 14px);
-    }
-
-  }
-
-}
-
-
-.slide-browser{
-
-  .dummy{
-    @include opacity(0);
-    width:100%;
-  }
-
-  .browser-container{
-    background: transparent url(/assets/images/svg-browser.svg) no-repeat left top;
-    background-size: 100% 100%;
-    display:block;
-    margin: 15% auto 0 auto;
-    position:relative;
-    right:-40px;
-    width:90%;
-    @include opacity(0);
-    @include transition(right 200ms ease-in-out, opacity 200ms ease-in-out);
-  }
-
-  .browser-content{
-
-  }
-
-
-}
-
-.cycle-slide{
-
-}
-
-.cycle-slide-active{
-
-  .browser-container{
-    right:0;
-    @include opacity(1);
-  }
-
-}
-
-
-
-
-/* about */
-
-.about{
-  background-color: $black;
-  padding: 100px 0;
-
-  img{
-    margin-bottom: 45px;
   }
 
   h2{
-    color: $white;
-    margin-bottom: 0px;
-  }
-
-  h3{
-    margin-bottom: 20px;
-  }
-
-  .social{
-
-    padding: 30px 0;
-
-    a{
-      display: block;
-      float: left;
-      margin-right: 10px;
-    }
-
-  }
-
-  .last-played{
-    margin-top: 30px;
+    color:$white;
+    padding-bottom: 350px;
+    padding-top: 250px;
+    text-align:center;
+    @include font("FuturaLight", 42px, 58px);
   }
 
 }
 
 
+// -----------------
+// Overview
+// -----------------
 
+.overview{
 
+  padding-bottom:200px;
+  padding-top:200px;
 
-/* contact */
+}
 
-.contact{
-  background-color: $grey;
-  padding: 100px 0;
+.overview-title{
 
-  .office,
-  .hiring{
-    margin-top: 10px;
+  h2{
+    color:$gold;
+    text-align:center;
+    @include font("Eastwood", 30px, 34px);
   }
 
-  .email-wrap{
-    font-weight: bold;
-    margin-top: 30px;
+  p{
+    color:$white;
+    text-align:center;
+    @include font("FuturaLight", 26px, 42px);
+  }
+
+}
+
+.overview-attributes-container{
+
+  padding-top:100px;
+
+  h3{
+    color:$gold;
+    margin-top:60px;
+    text-align:center;
+    @include font("Eastwood", 20px, 34px);
+  }
+
+  p{
+    color:$white;
+    text-align:center;
+    @include font("FuturaBook", 18px, 29px);
+  }
+
+  a{
+    color:$gold;
+    display:block;
+    margin-top:55px;
+    text-align:center;
+    @include font("FuturaBook", 14px, 29px);
+  }
+
+}
+
+.overview-icon-container{
+
+  background-color: $light-grey;
+  margin:0 auto;
+  height:160px;
+  overflow:hidden;
+  position:relative;
+  width:160px;
+  @include border-radius(80px);
+
+}
+
+#overview-expertise{
+
+  img{
+    position:absolute;
+    @include transition(all 300ms ease-in-out);
+  }
+
+  .wireframe{
+    left:0px;
+    top:40px;
+    width:70px;
+  }
+
+  .terminal{
+    left:85px;
+    top:25px;
+    width:75px;
+  }
+
+  .code{
+    left:85px;
+    top:90px;
+    width:80px;
+  }
+
+  &:hover{
+
+    img{
+      left:50%;
+      top:50%;
+    }
+
+    .wireframe{
+      margin: -45px 0 0 -35px;
+    }
+
+    .terminal{
+      margin: -26px 0 0 -37.5px;
+    }
+
+    .code{
+      margin: -43.5px 0 0 -40px;
+    }
+
+  }
+
+}
+
+#overview-process{
+
+  img{
+    left:150%;
+    margin: 0 0 0 -60px;
+    position:absolute;
+    top:40px;
+    width:120px;
+  }
+
+  img:first-child{
+    left:50%;
   }
 
 }

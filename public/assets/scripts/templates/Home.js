@@ -2,19 +2,13 @@ define([
   "jquery",
   "backstretch",
   "transit",
-
-  "illustrations/DepthIllustration",
   "illustrations/ProcessIllustration",
-  "illustrations/BeliefIllustration",
-
   "classes/WorkGallery"
 ], function(
   $,
   Backstretch,
   Transit,
-  DepthIllustration,
   ProcessIllustration,
-  BeliefIllustration,
   WorkGallery
   ){
 
@@ -37,14 +31,8 @@ define([
 
   Home.prototype.initAnimations = function(){
 
-    // No animations at this point
-    //this.initDepth();
-
     this.processIllustration = new ProcessIllustration();
-    this.processIllustration.start();
-
-    this.beliefIllustration = new BeliefIllustration();
-    this.beliefIllustration.start();
+    this.processIllustration.init();
 
   };
 

@@ -1,0 +1,35 @@
+.nav-container{
+
+  text-align:right;
+
+  ul{
+    li{
+
+      display:inline-block;
+      line-height:70px;
+
+      &+li{
+        margin-left:30px;
+      }
+
+      a{
+
+        color:$white;
+        border-bottom: 1px solid transparent;
+        line-height:70px;
+        padding-bottom:2px;
+        @include font("FuturaBold", 12px);
+        @include transition(border-bottom-color 200ms linear, color 200ms linear, padding-bottom 200ms linear);
+        @include text-shadow(1px 1px 1px #000);
+
+        &:hover{
+          color:$gold;
+          border-bottom:1px solid $gold;
+          padding-bottom:5px;
+        }
+
+      }
+    }
+  }
+
+}
