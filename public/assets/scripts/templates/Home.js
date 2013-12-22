@@ -3,12 +3,14 @@ define([
   "backstretch",
   "transit",
   "illustrations/ProcessIllustration",
+  "illustrations/CommunicationIllustration",
   "classes/WorkGallery"
 ], function(
   $,
   Backstretch,
   Transit,
   ProcessIllustration,
+  CommunicationIllustration,
   WorkGallery
   ){
 
@@ -33,6 +35,9 @@ define([
 
     this.processIllustration = new ProcessIllustration();
     this.processIllustration.init();
+
+    this.communicationIllustration = new CommunicationIllustration();
+    this.communicationIllustration.init();
 
   };
 
