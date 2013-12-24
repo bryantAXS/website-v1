@@ -1,7 +1,8 @@
 
 
 p{
-  @include font("EdmondsansRegular", 15px, 29px);
+
+  @include font("FuturaBook", 18px, 28px);
 
   a{
     color: $gold;

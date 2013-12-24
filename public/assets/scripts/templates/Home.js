@@ -4,14 +4,14 @@ define([
   "transit",
   "illustrations/ProcessIllustration",
   "illustrations/CommunicationIllustration",
-  "classes/WorkGallery"
+  "classes/WorkSection"
 ], function(
   $,
   Backstretch,
   Transit,
   ProcessIllustration,
   CommunicationIllustration,
-  WorkGallery
+  WorkSection
   ){
 
   var Home = function(){
@@ -26,8 +26,8 @@ define([
 
     this.initAnimations();
 
-    var workGallery = new WorkGallery();
-    workGallery.init();
+    var workSection = new WorkSection();
+    workSection.init();
 
   };
 
