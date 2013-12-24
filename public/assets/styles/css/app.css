@@ -9882,3 +9882,69 @@ html:hover [class^="ss-"] {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
+  /* line 366, ../sass/modules/_modules.scss */
+  .contact .title {
+    color: #dec17b;
+    display: block;
+    padding-bottom: 12px;
+    font-family: "FuturaBold";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300; }
+  /* line 373, ../sass/modules/_modules.scss */
+  .contact ul {
+    margin: 0;
+    padding: 0; }
+    /* line 376, ../sass/modules/_modules.scss */
+    .contact ul li {
+      list-style-type: none; }
+      /* line 378, ../sass/modules/_modules.scss */
+      .contact ul li a {
+        color: white;
+        font-family: "FuturaBook";
+        font-size: 15px;
+        line-height: 22px;
+        font-weight: 300;
+        -webkit-transition: all 250ms linear;
+        -moz-transition: all 250ms linear;
+        -o-transition: all 250ms linear;
+        transition: all 250ms linear; }
+        /* line 382, ../sass/modules/_modules.scss */
+        .contact ul li a:hover {
+          color: #dec17b; }
+
+/* line 391, ../sass/modules/_modules.scss */
+.address-container {
+  padding-bottom: 20px; }
+
+/* line 395, ../sass/modules/_modules.scss */
+address {
+  color: white;
+  font-family: "FuturaBook";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300; }
+
+/* line 400, ../sass/modules/_modules.scss */
+.emails {
+  color: white;
+  display: block;
+  font-family: "FuturaBook";
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 300; }
+  /* line 406, ../sass/modules/_modules.scss */
+  .emails a {
+    color: #dec17b; }
+
+/* line 412, ../sass/modules/_modules.scss */
+.signature-container {
+  padding: 100px 0 50px 0;
+  text-align: right; }
+  /* line 416, ../sass/modules/_modules.scss */
+  .signature-container span {
+    color: #dec17b;
+    font-family: "Eastwood";
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300; }
