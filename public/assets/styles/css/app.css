@@ -9808,6 +9808,9 @@ html:hover [class^="ss-"] {
 .about {
   padding-top: 180px; }
   /* line 288, ../sass/modules/_modules.scss */
+  .about > .row {
+    position: relative; }
+  /* line 292, ../sass/modules/_modules.scss */
   .about h4 {
     color: white;
     margin: 0;
@@ -9816,7 +9819,7 @@ html:hover [class^="ss-"] {
     font-size: 24px;
     line-height: 24px;
     font-weight: 300; }
-  /* line 295, ../sass/modules/_modules.scss */
+  /* line 299, ../sass/modules/_modules.scss */
   .about .position {
     color: #dec17b;
     display: block;
@@ -9825,38 +9828,57 @@ html:hover [class^="ss-"] {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 302, ../sass/modules/_modules.scss */
+  /* line 306, ../sass/modules/_modules.scss */
   .about .social {
     margin: 0;
     padding: 0;
     padding-bottom: 465px;
     margin-top: 30px; }
-    /* line 309, ../sass/modules/_modules.scss */
+    /* line 313, ../sass/modules/_modules.scss */
     .about .social li {
       float: left;
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      /* line 314, ../sass/modules/_modules.scss */
+      /* line 318, ../sass/modules/_modules.scss */
       .about .social li a {
         color: white;
         -webkit-transition: color 200ms ease-in-out;
         -moz-transition: color 200ms ease-in-out;
         -o-transition: color 200ms ease-in-out;
         transition: color 200ms ease-in-out; }
-        /* line 317, ../sass/modules/_modules.scss */
+        /* line 321, ../sass/modules/_modules.scss */
         .about .social li a:hover {
           color: #dec17b; }
-      /* line 321, ../sass/modules/_modules.scss */
+      /* line 325, ../sass/modules/_modules.scss */
       .about .social li + li {
         margin-left: 12px; }
-  /* line 328, ../sass/modules/_modules.scss */
+  /* line 332, ../sass/modules/_modules.scss */
   .about .dude-1 {
     position: absolute;
     bottom: 0;
-    left: 20px; }
-  /* line 334, ../sass/modules/_modules.scss */
+    left: 0px; }
+  /* line 338, ../sass/modules/_modules.scss */
   .about .dude-2 {
     position: absolute;
     bottom: 0;
     right: 0px; }
+
+/* line 351, ../sass/modules/_modules.scss */
+.contact {
+  background-color: #2f3633;
+  padding-top: 105px; }
+  /* line 356, ../sass/modules/_modules.scss */
+  .contact h3 {
+    color: #dec17b;
+    font-family: "Eastwood";
+    font-size: 20px;
+    line-height: 34px;
+    font-weight: 300; }
+  /* line 361, ../sass/modules/_modules.scss */
+  .contact .project-doc {
+    color: #dec17b;
+    font-family: "FuturaBold";
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 300; }
