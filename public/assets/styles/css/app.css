@@ -9758,19 +9758,29 @@ html:hover [class^="ss-"] {
 
 /* line 224, ../sass/modules/_modules.scss */
 .logos-container {
+  left: 0;
+  position: absolute;
+  top: 0;
   z-index: 1; }
 
 /* line 231, ../sass/modules/_modules.scss */
 .galleries-container {
+  position: absolute;
+  top: 0;
+  z-index: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
 /* line 238, ../sass/modules/_modules.scss */
 .hidden-content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1; }
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0; }
 
 /* line 244, ../sass/modules/_modules.scss */
+.work-gallery-copy-container .slide {
+  height: 500px;
+  width: 100%; }
+/* line 249, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .client-name {
   color: #fff;
   display: block;
@@ -9778,7 +9788,7 @@ html:hover [class^="ss-"] {
   font-size: 24px;
   line-height: 30px;
   font-weight: 300; }
-/* line 250, ../sass/modules/_modules.scss */
+/* line 255, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .project-name {
   color: #fff;
   display: block;
@@ -9788,29 +9798,29 @@ html:hover [class^="ss-"] {
   font-size: 15px;
   line-height: 21px;
   font-weight: 300; }
-/* line 258, ../sass/modules/_modules.scss */
+/* line 263, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .back-to-clients {
   color: #fff;
   font-family: "FuturaHeavy";
   font-size: 15px;
   line-height: 21px;
   font-weight: 300; }
-  /* line 262, ../sass/modules/_modules.scss */
+  /* line 267, ../sass/modules/_modules.scss */
   .work-gallery-copy-container .back-to-clients span {
     position: relative;
     top: 1px; }
 
-/* line 273, ../sass/modules/_modules.scss */
+/* line 278, ../sass/modules/_modules.scss */
 .work-gallery-examples-container .slide {
   width: 100%; }
 
-/* line 284, ../sass/modules/_modules.scss */
+/* line 289, ../sass/modules/_modules.scss */
 .about {
   padding-top: 180px; }
-  /* line 288, ../sass/modules/_modules.scss */
+  /* line 293, ../sass/modules/_modules.scss */
   .about > .row {
     position: relative; }
-  /* line 292, ../sass/modules/_modules.scss */
+  /* line 297, ../sass/modules/_modules.scss */
   .about h4 {
     color: white;
     margin: 0;
@@ -9819,7 +9829,7 @@ html:hover [class^="ss-"] {
     font-size: 24px;
     line-height: 24px;
     font-weight: 300; }
-  /* line 299, ../sass/modules/_modules.scss */
+  /* line 304, ../sass/modules/_modules.scss */
   .about .position {
     color: #dec17b;
     display: block;
@@ -9828,61 +9838,61 @@ html:hover [class^="ss-"] {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 306, ../sass/modules/_modules.scss */
+  /* line 311, ../sass/modules/_modules.scss */
   .about .social {
     margin: 0;
     padding: 0;
     padding-bottom: 465px;
     margin-top: 30px; }
-    /* line 313, ../sass/modules/_modules.scss */
+    /* line 318, ../sass/modules/_modules.scss */
     .about .social li {
       float: left;
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      /* line 318, ../sass/modules/_modules.scss */
+      /* line 323, ../sass/modules/_modules.scss */
       .about .social li a {
         color: white;
         -webkit-transition: color 200ms ease-in-out;
         -moz-transition: color 200ms ease-in-out;
         -o-transition: color 200ms ease-in-out;
         transition: color 200ms ease-in-out; }
-        /* line 321, ../sass/modules/_modules.scss */
+        /* line 326, ../sass/modules/_modules.scss */
         .about .social li a:hover {
           color: #dec17b; }
-      /* line 325, ../sass/modules/_modules.scss */
+      /* line 330, ../sass/modules/_modules.scss */
       .about .social li + li {
         margin-left: 12px; }
-  /* line 332, ../sass/modules/_modules.scss */
+  /* line 337, ../sass/modules/_modules.scss */
   .about .dude-1 {
     position: absolute;
     bottom: 0;
     left: 0px; }
-  /* line 338, ../sass/modules/_modules.scss */
+  /* line 343, ../sass/modules/_modules.scss */
   .about .dude-2 {
     position: absolute;
     bottom: 0;
     right: 0px; }
 
-/* line 351, ../sass/modules/_modules.scss */
+/* line 356, ../sass/modules/_modules.scss */
 .contact {
   background-color: #2f3633;
   padding-top: 105px; }
-  /* line 356, ../sass/modules/_modules.scss */
+  /* line 361, ../sass/modules/_modules.scss */
   .contact h3 {
     color: #dec17b;
     font-family: "Eastwood";
     font-size: 20px;
     line-height: 34px;
     font-weight: 300; }
-  /* line 361, ../sass/modules/_modules.scss */
+  /* line 366, ../sass/modules/_modules.scss */
   .contact .project-doc {
     color: #dec17b;
     font-family: "FuturaBold";
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 366, ../sass/modules/_modules.scss */
+  /* line 371, ../sass/modules/_modules.scss */
   .contact .title {
     color: #dec17b;
     display: block;
@@ -9891,14 +9901,14 @@ html:hover [class^="ss-"] {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 373, ../sass/modules/_modules.scss */
+  /* line 378, ../sass/modules/_modules.scss */
   .contact ul {
     margin: 0;
     padding: 0; }
-    /* line 376, ../sass/modules/_modules.scss */
+    /* line 381, ../sass/modules/_modules.scss */
     .contact ul li {
       list-style-type: none; }
-      /* line 378, ../sass/modules/_modules.scss */
+      /* line 383, ../sass/modules/_modules.scss */
       .contact ul li a {
         color: white;
         font-family: "FuturaBook";
@@ -9909,15 +9919,15 @@ html:hover [class^="ss-"] {
         -moz-transition: all 250ms linear;
         -o-transition: all 250ms linear;
         transition: all 250ms linear; }
-        /* line 382, ../sass/modules/_modules.scss */
+        /* line 387, ../sass/modules/_modules.scss */
         .contact ul li a:hover {
           color: #dec17b; }
 
-/* line 391, ../sass/modules/_modules.scss */
+/* line 396, ../sass/modules/_modules.scss */
 .address-container {
   padding-bottom: 20px; }
 
-/* line 395, ../sass/modules/_modules.scss */
+/* line 400, ../sass/modules/_modules.scss */
 address {
   color: white;
   font-family: "FuturaBook";
@@ -9925,7 +9935,7 @@ address {
   line-height: 22px;
   font-weight: 300; }
 
-/* line 400, ../sass/modules/_modules.scss */
+/* line 405, ../sass/modules/_modules.scss */
 .emails {
   color: white;
   display: block;
@@ -9933,15 +9943,15 @@ address {
   font-size: 14px;
   line-height: 22px;
   font-weight: 300; }
-  /* line 406, ../sass/modules/_modules.scss */
+  /* line 411, ../sass/modules/_modules.scss */
   .emails a {
     color: #dec17b; }
 
-/* line 412, ../sass/modules/_modules.scss */
+/* line 417, ../sass/modules/_modules.scss */
 .signature-container {
   padding: 100px 0 50px 0;
   text-align: right; }
-  /* line 416, ../sass/modules/_modules.scss */
+  /* line 421, ../sass/modules/_modules.scss */
   .signature-container span {
     color: #dec17b;
     font-family: "Eastwood";

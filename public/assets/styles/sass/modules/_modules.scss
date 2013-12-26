@@ -222,24 +222,29 @@
 }
 
 .logos-container{
-  // left:0;
-  // position:absolute;
-  // top:0;
+  left:0;
+  position:absolute;
+  top:0;
   z-index:1;
 }
 
 .galleries-container{
-  //position:absolute;
-  // top:0;
-  // z-index:0;
+  position:absolute;
+  top:0;
+  z-index:0;
   @include opacity(1);
 }
 
 .hidden-content{
-  @include opacity(1);
+  @include opacity(0);
 }
 
 .work-gallery-copy-container{
+
+  .slide{
+    height:500px;
+    width:100%;
+  }
 
   .client-name{
     color:#fff;

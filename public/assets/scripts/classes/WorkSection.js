@@ -10,6 +10,16 @@ define([
   Cycle2
   ){
 
+  $.fn.cycle.transitions.authSlide = {
+      before: function( opts, curr, next, fwd ) {
+          opts.API.stackSlides( opts, curr, next, fwd );
+          var height = opts.container.css('overflow','hidden').height();
+          opts.cssBefore = { left: 60, opacity: 0, display: "block" };
+          opts.animIn = { left: 0, opacity: 1 };
+          opts.animOut = { left: 60, opacity: 0 };
+      }
+  };
+
 
   /**
    * Constructor mo'fucka
@@ -21,6 +31,18 @@ define([
     this.$galleriesContainer = $(".galleries-container");
     this.$copyGalleryContainer = $(".work-gallery-copy-container");
     this.$examplesGalleryContainer = $(".work-gallery-examples-container");
+
+    // speed of animating in/out the opacity change of the logos and work galleries
+    this.galleriesTransitionSpeed = 300;
+
+    // speed of the actual cycle animations
+    this.galleryTransitionSpeed = 1000;
+
+    // how much to delay the work gallery fade in after the copy
+    this.showClientWorkDelay = 200;
+
+    // how much to delay the work gallery fade out after the copy leaves
+    this.showLogosWorkDelay = 200;
 
   };
 
@@ -36,17 +58,21 @@ define([
     this.$copyGallery = this.$copyGalleryContainer.cycle({
       slides: ".slide",
       timeout: 0,
-      fx: "fadeout",
-      autoHeight: "calc",
-      speed: 300
+      fx: "authSlide",
+      // autoHeight: "calc",
+      speed: this.galleryTransitionSpeed,
+      sync: false,
+      easing: "easeInOutCubic"
     });
 
     this.$examplesGallery = this.$examplesGalleryContainer.cycle({
       slides: ".slide",
       timeout: 0,
-      fx: "fadeout",
+      fx: "authSlide",
       autoHeight: "calc",
-      speed: 300
+      speed: this.galleryTransitionSpeed,
+      sync: false,
+      easing: "easeInOutCubic"
     });
 
     $(".client-link").on({
@@ -60,7 +86,7 @@ define([
 
     $(".back-to-clients").on({
       click: function(){
-        // self.showLogos();
+        self.showLogos();
         return false;
       }
     });
@@ -69,9 +95,47 @@ define([
 
   WorkSection.prototype.showClient = function(clientName){
 
+    var self = this;
+
     var slideIndex = this.getSlideIndex(clientName);
-    this.$copyGallery.cycle("goto", slideIndex);
-    this.$examplesGallery.cycle("goto", slideIndex);
+
+    // turning off the logos
+    this.$logosContainer.animate({
+      opacity: 0
+    }, this.galleriesTransitionSpeed, function(){
+
+      // show the copy
+      self.$copyGallery.cycle("goto", slideIndex);
+
+      // show the work
+      setTimeout(function(){
+        self.$examplesGallery.cycle("goto", slideIndex);
+      }, self.showClientWorkDelay);
+
+    });
+
+  };
+
+  WorkSection.prototype.showLogos = function(){
+
+    var self = this;
+
+    this.$copyGallery.cycle("goto", 0);
+
+    setTimeout(function(){
+
+      self.$examplesGallery.cycle("goto", 0);
+
+      setTimeout(function(){
+
+        //turning on the logos
+        self.$logosContainer.animate({
+          opacity: 1
+        }, self.galleriesTransitionSpeed);
+
+      }, self.galleryTransitionSpeed);
+
+    }, self.showLogosWorkDelay);
 
   };
 
