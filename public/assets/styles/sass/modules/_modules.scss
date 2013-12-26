@@ -3,6 +3,19 @@
   background: $black url(/assets/images/bg-black.jpg) repeat top left;
 }
 
+section{
+  position:relative;
+  z-index:1;
+}
+
+.fixed-hero{
+  height:805px;
+  position:fixed;
+  left:0;
+  top:0;
+  width:100%;
+}
+
 // -----------------
 // HERO
 // -----------------
@@ -15,8 +28,8 @@
 
   h2{
     color:$white;
-    padding-bottom: 350px;
-    padding-top: 250px;
+    padding-bottom: 300px;
+    padding-top: 200px;
     text-align:center;
     @include font("FuturaLight", 42px, 58px);
   }

@@ -22,9 +22,10 @@ define([
 
     var self = this;
 
-    $(".hero").backstretch("/assets/images/bg-hero.png");
+    $(".fixed-hero").backstretch("/assets/images/bg-hero.png");
 
     this.initAnimations();
+    this.initHeroBlackout();
 
     var workSection = new WorkSection();
     workSection.init();
@@ -38,6 +39,36 @@ define([
 
     this.communicationIllustration = new CommunicationIllustration();
     this.communicationIllustration.init();
+
+  };
+
+  Home.prototype.initHeroBlackout = function(){
+
+    var self = this;
+    var $window = $(window);
+    var $hero = $(".hero");
+    var heroHeight = $hero.height();
+    this.$hero = $(".hero");
+
+    $window.scroll(function(){
+
+      var scrollTop = $window.scrollTop();
+      if(scrollTop < heroHeight){
+        self.setHeroBackground(scrollTop, heroHeight);
+      }
+
+    });
+
+  };
+
+  Home.prototype.setHeroBackground = function(scrollTop, heroHeight){
+
+    var pct = scrollTop / heroHeight;
+    var rgba = "rgba(0,0,0, "+pct+")";
+
+    this.$hero.css({
+      "background-color": rgba
+    });
 
   };
 
