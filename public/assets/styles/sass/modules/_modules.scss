@@ -52,8 +52,17 @@ section{
 
   h2{
     color:$gold;
+    margin-bottom:30px;
     text-align:center;
     @include font("Eastwood", 30px, 34px);
+  }
+
+  hr{
+    background-color: rgba($white, .25);
+    border:none;
+    height:1px;
+    margin:60px auto 0 auto;
+    width:160px;
   }
 
   p{
@@ -271,7 +280,7 @@ section{
 .work-gallery-copy-container{
 
   .slide{
-    height:500px;
+    height:660px;
     width:100%;
   }
 
@@ -284,9 +293,22 @@ section{
   .project-name{
     color:#fff;
     display:block;
-    margin: 25px 0 17px 0;
+    margin-top: 7px;
     text-transform:uppercase;
     @include font("FuturaHeavy", 15px);
+  }
+
+  .project-traits{
+
+    margin:0;
+    padding: 20px 0;
+
+    li{
+      color:#fff;
+      display:block;
+      @include font("FuturaBold", 12px);
+    }
+
   }
 
   .back-to-clients{
@@ -294,8 +316,9 @@ section{
     @include font("FuturaHeavy", 15px);
 
     span{
+      font-size:12px;
+      margin-right:5px;
       position:relative;
-      top:1px;
     }
 
   }
@@ -304,8 +327,13 @@ section{
 
 .work-gallery-examples-container{
 
-  .slide{
+  .slideshow{
     width:100%;
+
+    img{
+      width:100%;
+    }
+
   }
 
 }

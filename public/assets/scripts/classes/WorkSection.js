@@ -31,6 +31,7 @@ define([
     this.$galleriesContainer = $(".galleries-container");
     this.$copyGalleryContainer = $(".work-gallery-copy-container");
     this.$examplesGalleryContainer = $(".work-gallery-examples-container");
+    this.$innerGalleries = $(".inner-gallery");
 
     // speed of animating in/out the opacity change of the logos and work galleries
     this.galleriesTransitionSpeed = 300;
@@ -66,13 +67,33 @@ define([
     });
 
     this.$examplesGallery = this.$examplesGalleryContainer.cycle({
-      slides: ".slide",
+      slides: ".slideshow",
       timeout: 0,
       fx: "authSlide",
       autoHeight: "calc",
       speed: this.galleryTransitionSpeed,
       sync: false,
       easing: "easeInOutCubic"
+    });
+
+    this.$examplesGallery.on("cycle-before", function(event, optionHash, outgoingSlideEl, incomingSlideEl, forwardFlag){
+
+      var $next = $(incomingSlideEl);
+      var $innerGallery = $next.find('.inner-gallery');
+
+      self.$innerGalleries.cycle('stop');
+
+      if($innerGallery.length){
+        $innerGallery.cycle('destroy').cycle({
+          slides: "img",
+          timeout: 6000,
+          fx: "fadeout",
+          autoHeight: "calc",
+          speed: 1500,
+          easing: "easeInOutCubic"
+        });
+      }
+
     });
 
     $(".client-link").on({
@@ -98,6 +119,8 @@ define([
     var self = this;
 
     var slideIndex = this.getSlideIndex(clientName);
+
+
 
     // turning off the logos
     this.$logosContainer.animate({

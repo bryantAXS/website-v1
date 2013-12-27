@@ -26,6 +26,7 @@ define([
 
     this.initAnimations();
     this.initHeroBlackout();
+    this.initNavScrolling();
 
     var workSection = new WorkSection();
     workSection.init();
@@ -46,28 +47,61 @@ define([
 
     var self = this;
     var $window = $(window);
-    var $hero = $(".hero");
-    var heroHeight = $hero.height();
-    this.$hero = $(".hero");
+
+    self.$hero = $(".hero");
+    self.heroHeight = self.$hero.height();
+
+    // are we animating
+    self.animating = false;
 
     $window.scroll(function(){
-
-      var scrollTop = $window.scrollTop();
-      if(scrollTop < heroHeight){
-        self.setHeroBackground(scrollTop, heroHeight);
-      }
-
+      self.scrollTop = $window.scrollTop();
+      self.calcScrollDistance();
     });
+
 
   };
 
-  Home.prototype.setHeroBackground = function(scrollTop, heroHeight){
+  Home.prototype.calcScrollDistance = function(){
 
-    var pct = scrollTop / heroHeight;
-    var rgba = "rgba(0,0,0, "+pct+")";
+    var self = this;
 
-    this.$hero.css({
-      "background-color": rgba
+    if(!self.animating && self.scrollTop < self.heroHeight){
+
+      self.animating = true;
+
+      requestAnimationFrame(function(){
+
+        self.animating = false;
+        var pct = self.scrollTop / self.heroHeight;
+        var rgba = "rgba(27, 31, 29, "+pct+")";
+
+        self.$hero.css({
+          "background-color": rgba
+        });
+
+      });
+
+    }
+
+  };
+
+  Home.prototype.initNavScrolling = function(){
+
+    $(".scroll").on({
+      click: function(){
+
+        var $el = $(this);
+
+        var id = $el.attr("href").replace("/","");
+
+        $('html, body').animate({
+          scrollTop: $(id).offset().top
+        }, 1500, "easeOutQuint");
+
+        return false;
+
+      }
     });
 
   };

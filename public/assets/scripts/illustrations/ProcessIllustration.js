@@ -18,7 +18,7 @@ define([
 
       self.interval = setInterval(function(){
         self.changeImage();
-      }, 2000);
+      }, 1250);
 
       self.changeImage();
 
@@ -42,7 +42,7 @@ define([
     }, 500, function(){
       $oldImage.css({
         "left": "150%"
-      })
+      });
     });
 
     $newImage.transit({
