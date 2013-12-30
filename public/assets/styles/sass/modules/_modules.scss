@@ -26,11 +26,12 @@ section{
     width:70%;
   }
 
-  h2{
+  h1{
     color:$white;
     padding-bottom: 300px;
     padding-top: 200px;
     text-align:center;
+    text-transform: uppercase;
     @include font("FuturaLight", 42px, 58px);
   }
 
@@ -61,14 +62,14 @@ section{
     background-color: rgba($white, .25);
     border:none;
     height:1px;
-    margin:60px auto 0 auto;
+    margin:60px auto 60px auto;
     width:160px;
   }
 
   p{
     color:$white;
     text-align:center;
-    @include font("FuturaLight", 26px, 42px);
+    @include font("FuturaLight", 24px, 38px);
   }
 
 }
@@ -79,25 +80,29 @@ section{
 
   h3{
     color:$gold;
-    margin-top:60px;
+    letter-spacing: 1px;
+    margin:60px 0 20px 0;
     text-align:center;
-    @include font("Eastwood", 20px, 34px);
+    text-transform: uppercase;
+    @include font("Eastwood", 19px, 33px);
   }
 
   p{
     color:$white;
     text-align:center;
-    @include font("FuturaBook", 18px, 29px);
+    @include font("FuturaBook", 17px, 28px);
   }
 
   a{
     color:$gold;
     display:block;
     left:0;
+    letter-spacing: 0.7px;
     margin-top:55px;
     position:relative;
     text-align:center;
-    @include font("FuturaBook", 14px, 29px);
+    text-transform: uppercase;
+    @include font("FuturaBook", 12px, 28px);
 
     span{
       left:0px;
@@ -417,7 +422,9 @@ section{
 
   h3{
     color:$gold;
-    @include font("Eastwood", 20px, 34px);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    @include font("Eastwood", 19px, 33px);
   }
 
   .project-doc{
