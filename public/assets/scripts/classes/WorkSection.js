@@ -120,8 +120,6 @@ define([
 
     var slideIndex = this.getSlideIndex(clientName);
 
-
-
     // turning off the logos
     this.$logosContainer.animate({
       opacity: 0
@@ -134,6 +132,16 @@ define([
       setTimeout(function(){
         self.$examplesGallery.cycle("goto", slideIndex);
       }, self.showClientWorkDelay);
+
+
+      //adjust zindex
+      self.$logosContainer.css({
+        "z-index": 0
+      });
+
+      self.$galleriesContainer.css({
+        "z-index": 1
+      });
 
     });
 
@@ -154,7 +162,18 @@ define([
         //turning on the logos
         self.$logosContainer.animate({
           opacity: 1
-        }, self.galleriesTransitionSpeed);
+        }, self.galleriesTransitionSpeed, function(){
+
+          //adjust zindex
+          self.$logosContainer.css({
+            "z-index": 1
+          });
+
+          self.$galleriesContainer.css({
+            "z-index": 0
+          });
+
+        });
 
       }, self.galleryTransitionSpeed);
 
