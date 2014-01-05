@@ -1,6 +1,6 @@
 define([
   "jquery",
-  "transit",
+  "jquery.transit",
 ], function($,Transit){
 
   var ProcessIllustration = function(){

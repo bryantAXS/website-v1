@@ -12,10 +12,11 @@
   "dependencies": {
     "requirejs": "~2.1.8",
     "jquery": "~2.0.3",
-    "foundation": "~4.3.1",
+    "foundation": "~5",
     "underscore": "~1.5.1",
     "jquery.transit": "~0.9.9",
     "jquery.easing": "~1.3.0",
-    "jquery-cycle2": "*"
+    "jquery-cycle2": "*",
+    "jquery-backstretch": "~2.0.4"
   }
 }

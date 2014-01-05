@@ -1,7 +1,7 @@
 define([
   "jquery",
-  "backstretch",
-  "transit",
+  "jquery-backstretch",
+  "jquery.transit",
   "illustrations/ProcessIllustration",
   "illustrations/CommunicationIllustration",
   "classes/WorkSection"

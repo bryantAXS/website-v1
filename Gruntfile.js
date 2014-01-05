@@ -3,8 +3,6 @@ module.exports = function(grunt) {
 
   var settings = grunt.file.readJSON('config/grunt_settings.json');
 
-  console.log(settings.db.local.database);
-
   // Project configuration.
   grunt.initConfig({
 
@@ -46,22 +44,18 @@ module.exports = function(grunt) {
         files: [
 
           // Foundation
-          // {cwd: "bower_components/foundation/js", src: '**', dest: 'public/assets/scripts/vendor', expand: true, flatten: false},
-          // {cwd: "bower_components/foundation/scss/foundation", src: '**', dest: 'public/assets/styles/sass/foundation', expand: true, flatten: false},
-          // {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "bower_components/foundation/scss", src: 'foundation.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
-          // {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "bower_components/foundation/scss", src: 'normalize.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
+          {cwd: "public/bower_components/foundation/js", src: '**', dest: 'public/assets/scripts/vendor', expand: true, flatten: false},
+          {cwd: "public/bower_components/foundation/scss/foundation", src: '**', dest: 'public/assets/styles/sass/foundation', expand: true, flatten: false},
+          {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "public/bower_components/foundation/scss", src: 'foundation.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
+          {isFile: true, rename: function(dest, src){ return dest + "_" + src; }, cwd: "public/bower_components/foundation/scss", src: 'normalize.scss', dest: 'public/assets/styles/sass/', expand: true, flatten: false},
 
-          {expand: true, flatten: false, cwd: "bower_components/jquery", src: 'jquery.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
-          {expand: true, flatten: false, cwd: "bower_components/requirejs", src: 'require.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
-          {expand: true, flatten: false, cwd: "bower_components/underscore", src: 'underscore.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
-
-          {expand: true, flatten: false, cwd: "bower_components/jquery.transit", src: 'jquery.transit.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
-          {expand: true, flatten: false, cwd: "bower_components/jquery.easing/js", src: 'jquery.easing.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
+          {expand: true, flatten: false, cwd: "public/bower_components/requirejs", src: 'require.js', dest: 'public/assets/scripts/vendor/', filter: 'isFile'},
 
         ]
       }
     },
 
+    // -- Require.js Compiling
     requirejs: {
       compile: {
         options: {
@@ -71,16 +65,30 @@ module.exports = function(grunt) {
           out: "public/assets/scripts/main-built.js"
         }
       }
+    },
+
+    // -- Adding bower packages to require.js paths
+    bower: {
+      target: {
+        rjsConfig: 'public/assets/scripts/main.js',
+        options: {
+          exclude: ['requirejs']
+        }
+      }
     }
 
   });
 
+  // TASKS
+  grunt.loadNpmTasks('grunt-bower-requirejs');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-deployments');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks("grunt-rsync");
 
   grunt.registerTask("copy-plugins", ["copy:plugins"]);
+  grunt.registerTask("content_pull", ["rsync:production"]);
+  grunt.registerTask("copy-bower", ["bower"]);
 
   //Default task(s).
   //grunt.registerTask('default', [""]);

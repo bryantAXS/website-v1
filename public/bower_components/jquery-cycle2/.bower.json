@@ -1,0 +1,13 @@
+{
+  "name": "jquery-cycle2",
+  "homepage": "https://github.com/malsup/cycle2",
+  "_release": "56f952d1e3",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "56f952d1e32ccda186f4a511ca2253b7e8820c40"
+  },
+  "_source": "git://github.com/malsup/cycle2.git",
+  "_target": "*",
+  "_originalSource": "jquery-cycle2"
+}

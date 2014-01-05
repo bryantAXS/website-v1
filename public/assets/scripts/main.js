@@ -4,39 +4,51 @@
 
 // Setting up require.js paths
 require.config( {
-
   baseUrl: "/assets/scripts",
-
-  urlArgs: "bust=" +  (new Date()).getTime(),
-
-  paths:{
-    "jquery": "vendor/jquery",
-    "underscore": "vendor/underscore",
-    "backstretch": "plugins/backstretch",
-    "sitewide": "plugins/sitewide",
-    "transit": "vendor/jquery.transit",
-    "easing": "vendor/jquery.easing",
-    "cycle2": "plugins/cycle2"
+  urlArgs: "bust=1388941986695",
+  paths: {
+    jquery: "../../bower_components/jquery/jquery",
+    underscore: "../../bower_components/underscore/underscore",
+    sitewide: "plugins/sitewide",
+    cycle2: "plugins/cycle2",
+    foundation: "../../bower_components/foundation/js/foundation",
+    "jquery-backstretch": "../../bower_components/jquery-backstretch/jquery.backstretch",
+    "jquery.easing": "../../bower_components/jquery.easing/js/jquery.easing.min",
+    "jquery.transit": "../../bower_components/jquery.transit/jquery.transit",
+    modernizr: "../../bower_components/modernizr/modernizr"
   },
-
   shim: {
-    'underscore': {
+    underscore: {
       exports: "_"
     },
-    'backstretch': {
-      deps: ['jquery']
+    "jquery-backstretch": {
+      deps: [
+        "jquery"
+      ]
     },
-    'sitewide': {
-      deps: ['jquery']
+    sitewide: {
+      deps: [
+        "jquery"
+      ]
     },
-    'transit': {
-      deps: ['jquery', 'easing']
+    "jquery.transit": {
+      deps: [
+        "jquery",
+        "jquery.easing"
+      ]
     },
-    'cycle2': {
-      deps: ['jquery', 'easing']
+    "jquery.easing": {
+      deps: [
+        "jquery"
+      ]
+    },
+    cycle2: {
+      deps: [
+        "jquery",
+        "jquery.easing"
+      ]
     }
   }
-
 });
 
 
@@ -76,7 +88,6 @@ require([
   "jquery",
   "underscore",
   "sitewide",
-  "classes/sitewide"
   ], function($, _, Sitewide){
 
     var sitewide = new Sitewide();

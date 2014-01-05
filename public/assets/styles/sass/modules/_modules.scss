@@ -24,6 +24,13 @@ section{
 
   .logo{
     width:70%;
+
+    @media #{$small-only} {
+      display:block;
+      margin: 0 auto;
+      width:40%;
+    }
+
   }
 
   h1{
@@ -33,6 +40,13 @@ section{
     text-align:center;
     text-transform: uppercase;
     @include font("FuturaLight", 42px, 58px);
+
+    @media #{$small-only} {
+      padding-bottom: 90px;
+      padding-top: 60px;
+      @include font("FuturaLight", 38px, 50px);
+    }
+
   }
 
 }
@@ -46,6 +60,14 @@ section{
 
   padding-bottom:130px;
   padding-top:130px;
+
+  .columns.small-12 + .columns.small-12{
+
+    @media #{$small-only} {
+      padding-top:50px;
+    }
+
+  }
 
 }
 
@@ -459,6 +481,19 @@ section{
         }
       }
     }
+  }
+
+  @media #{$small-only} {
+    padding-top:80px;
+    text-align:center;
+  }
+
+  .small-12 + .small-12{
+
+    @media #{$small-only} {
+      padding-top:50px;
+    }
+
   }
 
 }
