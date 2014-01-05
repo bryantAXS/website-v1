@@ -2,7 +2,7 @@ define([
   "jquery",
   "jquery-backstretch",
   "jquery.transit",
-  "cycle2"
+  "cycle2",
 ], function(
   $,
   Backstretch,

@@ -27,6 +27,7 @@ define([
     this.initAnimations();
     this.initHeroBlackout();
     this.initNavScrolling();
+    this.initBrowserResize();
 
     var workSection = new WorkSection();
     workSection.init();
@@ -103,6 +104,48 @@ define([
 
       }
     });
+
+  };
+
+  Home.prototype.initBrowserResize = function(){
+
+    var self = this;
+    self.adjusting = false;
+
+    this.$chrisColumn = $("#chris-column");
+    this.$bryantColumn = $("#bryant-column");
+
+    $(window).on("resize", function(){
+      self.resizeBrowser();
+    });
+
+    $(window).trigger("resize");
+
+  };
+
+  Home.prototype.resizeBrowser = function(){
+
+    var self = this;
+
+    if(!self.adjusting){
+
+      requestAnimationFrame(function(){
+        self.adjusting = true;
+        self.adjustHeight();
+      });
+
+    }
+
+  };
+
+  Home.prototype.adjustHeight = function(){
+
+    var self = this;
+    var height = this.$bryantColumn.height();
+
+    this.$chrisColumn.height(height);
+
+    self.adjusting = false;
 
   };
 

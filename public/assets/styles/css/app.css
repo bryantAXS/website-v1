@@ -11864,24 +11864,25 @@ section {
 
 /* line 280, ../sass/modules/_modules.scss */
 .work {
+  overflow: hidden;
   padding-top: 140px;
   min-height: 860px; }
 
-/* line 285, ../sass/modules/_modules.scss */
+/* line 286, ../sass/modules/_modules.scss */
 .work-stage-container {
   position: relative; }
 
-/* line 289, ../sass/modules/_modules.scss */
+/* line 290, ../sass/modules/_modules.scss */
 .logos-container {
   left: 0;
   position: absolute;
   top: 0;
   z-index: 1; }
-  /* line 295, ../sass/modules/_modules.scss */
+  /* line 296, ../sass/modules/_modules.scss */
   .logos-container .client-logo {
     margin-bottom: 20px; }
 
-/* line 301, ../sass/modules/_modules.scss */
+/* line 302, ../sass/modules/_modules.scss */
 .galleries-container {
   position: absolute;
   top: 0;
@@ -11889,16 +11890,16 @@ section {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1; }
 
-/* line 308, ../sass/modules/_modules.scss */
+/* line 309, ../sass/modules/_modules.scss */
 .hidden-content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0; }
 
-/* line 314, ../sass/modules/_modules.scss */
+/* line 315, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .slide {
   height: 660px;
   width: 100%; }
-/* line 319, ../sass/modules/_modules.scss */
+/* line 320, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .client-name {
   color: #fff;
   display: block;
@@ -11906,7 +11907,7 @@ section {
   font-size: 24px;
   line-height: 30px;
   font-weight: 300; }
-/* line 325, ../sass/modules/_modules.scss */
+/* line 326, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .project-name {
   color: #fff;
   display: block;
@@ -11915,11 +11916,11 @@ section {
   font-size: 13px;
   line-height: 19px;
   font-weight: 300; }
-/* line 332, ../sass/modules/_modules.scss */
+/* line 333, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .project-traits {
   margin: 0;
   padding: 30px 0; }
-  /* line 337, ../sass/modules/_modules.scss */
+  /* line 338, ../sass/modules/_modules.scss */
   .work-gallery-copy-container .project-traits li {
     color: #fff;
     display: block;
@@ -11927,33 +11928,37 @@ section {
     font-size: 12px;
     line-height: 18px;
     font-weight: 300; }
-/* line 345, ../sass/modules/_modules.scss */
+/* line 346, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .back-to-clients {
   color: #fff;
   font-family: "FuturaHeavy";
   font-size: 15px;
   line-height: 21px;
   font-weight: 300; }
-  /* line 349, ../sass/modules/_modules.scss */
+  /* line 350, ../sass/modules/_modules.scss */
   .work-gallery-copy-container .back-to-clients span {
     font-size: 12px;
     margin-right: 5px;
     position: relative; }
 
-/* line 361, ../sass/modules/_modules.scss */
+/* line 362, ../sass/modules/_modules.scss */
 .work-gallery-examples-container .slideshow {
   width: 100%; }
-  /* line 364, ../sass/modules/_modules.scss */
+  /* line 365, ../sass/modules/_modules.scss */
   .work-gallery-examples-container .slideshow img {
     width: 100%; }
 
-/* line 377, ../sass/modules/_modules.scss */
+/* line 378, ../sass/modules/_modules.scss */
 .about {
   padding-top: 130px; }
-  /* line 381, ../sass/modules/_modules.scss */
+  /* line 382, ../sass/modules/_modules.scss */
   .about > .row {
     position: relative; }
-  /* line 385, ../sass/modules/_modules.scss */
+  @media only screen and (max-width: 40em) {
+    /* line 386, ../sass/modules/_modules.scss */
+    .about .large-4 {
+      padding-top: 195px; } }
+  /* line 392, ../sass/modules/_modules.scss */
   .about h4 {
     color: white;
     margin: 0;
@@ -11962,7 +11967,7 @@ section {
     font-size: 24px;
     line-height: 24px;
     font-weight: 300; }
-  /* line 392, ../sass/modules/_modules.scss */
+  /* line 399, ../sass/modules/_modules.scss */
   .about .position {
     color: #dec17b;
     display: block;
@@ -11972,47 +11977,62 @@ section {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 400, ../sass/modules/_modules.scss */
+  /* line 407, ../sass/modules/_modules.scss */
   .about .social {
     margin: 0;
     padding: 0;
-    padding-bottom: 465px;
+    padding-bottom: 275px;
     margin-top: 30px; }
-    /* line 407, ../sass/modules/_modules.scss */
+    @media only screen and (max-width: 40em) {
+      /* line 407, ../sass/modules/_modules.scss */
+      .about .social {
+        padding-bottom: 100px; } }
+    /* line 418, ../sass/modules/_modules.scss */
     .about .social li {
       float: left;
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      /* line 412, ../sass/modules/_modules.scss */
+      /* line 423, ../sass/modules/_modules.scss */
       .about .social li a {
         color: white;
         -webkit-transition: color 200ms ease-in-out;
         -moz-transition: color 200ms ease-in-out;
         -o-transition: color 200ms ease-in-out;
         transition: color 200ms ease-in-out; }
-        /* line 415, ../sass/modules/_modules.scss */
+        /* line 426, ../sass/modules/_modules.scss */
         .about .social li a:hover {
           color: #dec17b; }
-      /* line 419, ../sass/modules/_modules.scss */
+      /* line 430, ../sass/modules/_modules.scss */
       .about .social li + li {
         margin-left: 12px; }
-  /* line 426, ../sass/modules/_modules.scss */
+  /* line 437, ../sass/modules/_modules.scss */
   .about .dude-1 {
     position: absolute;
     bottom: 0;
-    left: 0px; }
-  /* line 432, ../sass/modules/_modules.scss */
+    left: 0px;
+    width: 90%; }
+    @media only screen and (max-width: 40em) {
+      /* line 437, ../sass/modules/_modules.scss */
+      .about .dude-1 {
+        bottom: auto;
+        top: 0; } }
+  /* line 450, ../sass/modules/_modules.scss */
   .about .dude-2 {
     position: absolute;
     bottom: 0;
     right: 0px; }
+    @media only screen and (max-width: 40em) {
+      /* line 450, ../sass/modules/_modules.scss */
+      .about .dude-2 {
+        bottom: auto;
+        top: 0; } }
 
-/* line 445, ../sass/modules/_modules.scss */
+/* line 468, ../sass/modules/_modules.scss */
 .contact {
   background-color: #2f3633;
   padding-top: 130px; }
-  /* line 450, ../sass/modules/_modules.scss */
+  /* line 473, ../sass/modules/_modules.scss */
   .contact h3 {
     color: #dec17b;
     letter-spacing: 1px;
@@ -12021,14 +12041,14 @@ section {
     font-size: 19px;
     line-height: 33px;
     font-weight: 300; }
-  /* line 457, ../sass/modules/_modules.scss */
+  /* line 480, ../sass/modules/_modules.scss */
   .contact .project-doc {
     color: #dec17b;
     font-family: "FuturaBold";
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 462, ../sass/modules/_modules.scss */
+  /* line 485, ../sass/modules/_modules.scss */
   .contact .title {
     color: #dec17b;
     display: block;
@@ -12038,14 +12058,14 @@ section {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 470, ../sass/modules/_modules.scss */
+  /* line 493, ../sass/modules/_modules.scss */
   .contact ul {
     margin: 0;
     padding: 0; }
-    /* line 473, ../sass/modules/_modules.scss */
+    /* line 496, ../sass/modules/_modules.scss */
     .contact ul li {
       list-style-type: none; }
-      /* line 475, ../sass/modules/_modules.scss */
+      /* line 498, ../sass/modules/_modules.scss */
       .contact ul li a {
         color: white;
         font-family: "FuturaBook";
@@ -12056,24 +12076,24 @@ section {
         -moz-transition: all 250ms linear;
         -o-transition: all 250ms linear;
         transition: all 250ms linear; }
-        /* line 479, ../sass/modules/_modules.scss */
+        /* line 502, ../sass/modules/_modules.scss */
         .contact ul li a:hover {
           color: #dec17b; }
   @media only screen and (max-width: 40em) {
-    /* line 445, ../sass/modules/_modules.scss */
+    /* line 468, ../sass/modules/_modules.scss */
     .contact {
       padding-top: 80px;
       text-align: center; } }
   @media only screen and (max-width: 40em) {
-    /* line 491, ../sass/modules/_modules.scss */
+    /* line 514, ../sass/modules/_modules.scss */
     .contact .small-12 + .small-12 {
       padding-top: 50px; } }
 
-/* line 501, ../sass/modules/_modules.scss */
+/* line 524, ../sass/modules/_modules.scss */
 .address-container {
   padding-bottom: 20px; }
 
-/* line 505, ../sass/modules/_modules.scss */
+/* line 528, ../sass/modules/_modules.scss */
 address {
   color: white;
   font-family: "FuturaBook";
@@ -12081,7 +12101,7 @@ address {
   line-height: 22px;
   font-weight: 300; }
 
-/* line 510, ../sass/modules/_modules.scss */
+/* line 533, ../sass/modules/_modules.scss */
 .emails {
   color: white;
   display: block;
@@ -12090,15 +12110,15 @@ address {
   font-size: 15px;
   line-height: 23px;
   font-weight: 300; }
-  /* line 517, ../sass/modules/_modules.scss */
+  /* line 540, ../sass/modules/_modules.scss */
   .emails a {
     color: #dec17b; }
 
-/* line 523, ../sass/modules/_modules.scss */
+/* line 546, ../sass/modules/_modules.scss */
 .signature-container {
   padding: 100px 0 50px 0;
   text-align: right; }
-  /* line 527, ../sass/modules/_modules.scss */
+  /* line 550, ../sass/modules/_modules.scss */
   .signature-container span {
     color: #dec17b;
     font-family: "Eastwood";

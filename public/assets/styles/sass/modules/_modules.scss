@@ -278,6 +278,7 @@ section{
 // ----------------
 
 .work{
+  overflow:hidden;
   padding-top:140px;
   min-height:860px;
 }
@@ -382,6 +383,12 @@ section{
     position:relative;
   }
 
+  .large-4{
+    @media #{$small-only} {
+      padding-top:195px;
+    }
+  }
+
   h4{
     color:$white;
     margin:0;
@@ -401,8 +408,12 @@ section{
 
     margin:0;
     padding:0;
-    padding-bottom:465px;
+    padding-bottom:275px;
     margin-top:30px;
+
+    @media #{$small-only} {
+      padding-bottom:100px;
+    }
 
     li{
       float:left;
@@ -427,12 +438,24 @@ section{
     position:absolute;
     bottom:0;
     left:0px;
+    width:90%;
+
+    @media #{$small-only} {
+      bottom:auto;
+      top:0;
+    }
+
   }
 
   .dude-2{
     position:absolute;
     bottom:0;
     right:0px;
+
+    @media #{$small-only} {
+      bottom:auto;
+      top:0;
+    }
   }
 
 }

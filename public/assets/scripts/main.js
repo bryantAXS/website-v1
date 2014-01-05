@@ -47,6 +47,104 @@ require.config( {
         "jquery",
         "jquery.easing"
       ]
+    },
+
+        // Foundation and dependancies
+    foundation: {
+      deps: [
+        "jquery"
+      ],
+      exports: "foundation"
+    },
+    "foundation.min": {
+      deps: [
+        "jquery"
+      ],
+      exports: "foundation"
+    },
+    "foundation.abide": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.accordion": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.alert": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.clearing": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.dropdown": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.interchange": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.joyride": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.magellan": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.offcanvas": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.orbit": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.reveal": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.tab": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.tooltip": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
+    },
+    "foundation.topbar": {
+      deps: [
+        "jquery",
+        "foundation"
+      ]
     }
   }
 });
