@@ -327,7 +327,7 @@ section{
     color:#fff;
     display:block;
     text-transform:uppercase;
-    @include font("Futura", 13px);
+    @include font("FuturaBook", 13px);
   }
 
   .project-traits{
@@ -338,7 +338,7 @@ section{
     li{
       color:#fff;
       display:block;
-      @include font("Futura", 12px);
+      @include font("FuturaBold", 12px);
     }
 
   }

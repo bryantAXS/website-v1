@@ -11912,7 +11912,7 @@ section {
   color: #fff;
   display: block;
   text-transform: uppercase;
-  font-family: "Futura";
+  font-family: "FuturaBook";
   font-size: 13px;
   line-height: 19px;
   font-weight: 300; }
@@ -11924,7 +11924,7 @@ section {
   .work-gallery-copy-container .project-traits li {
     color: #fff;
     display: block;
-    font-family: "Futura";
+    font-family: "FuturaBold";
     font-size: 12px;
     line-height: 18px;
     font-weight: 300; }
