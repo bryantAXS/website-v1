@@ -379,14 +379,18 @@ section{
 
   padding-top:130px;
 
+  @media #{$small-only} {
+      padding-top:50px;
+  }
+
   >.row{
     position:relative;
   }
 
   .large-4{
-    @media #{$small-only} {
-      padding-top:195px;
-    }
+    // @media #{$small-only} {
+    //   padding-top:195px;
+    // }
   }
 
   h4{

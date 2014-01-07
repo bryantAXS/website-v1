@@ -107,21 +107,21 @@ define([
 
   };
 
-  Home.prototype.initBrowserResize = function(){
+  // Home.prototype.initBrowserResize = function(){
 
-    var self = this;
-    self.adjusting = false;
+  //   var self = this;
+  //   self.adjusting = false;
 
-    this.$chrisColumn = $("#chris-column");
-    this.$bryantColumn = $("#bryant-column");
+  //   this.$chrisColumn = $("#chris-column");
+  //   this.$bryantColumn = $("#bryant-column");
 
-    $(window).on("resize", function(){
-      self.resizeBrowser();
-    });
+  //   $(window).on("resize", function(){
+  //     self.resizeBrowser();
+  //   });
 
-    $(window).trigger("resize");
+  //   $(window).trigger("resize");
 
-  };
+  // };
 
   Home.prototype.resizeBrowser = function(){
 
