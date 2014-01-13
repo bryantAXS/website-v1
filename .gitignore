@@ -19,6 +19,8 @@ bower_modules
 
 /craft/config/local/db.php
 
+*.psd
+
 
 
 
