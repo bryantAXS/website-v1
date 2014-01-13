@@ -5,23 +5,22 @@ else
 end
 
 if !env.nil? && env == "production" then
-
+  set :application, "authenticff.com"
 else
-
   set :application, "staging.authenticff.com"
-  set :deploy_to, "/var/www/#{application}"
-
-  set :user, 'root'
-  set :password, 'NJLinHV9gW7jUz'
-  set :port, 24
-
-  role :app, "198.58.109.239"
-  role :web, "198.58.109.239"
-  role :db,  "198.58.109.239", :primary => true
-
-  set :branch, "master"
-
 end
+
+set :deploy_to, "/var/www/#{application}"
+
+set :user, 'root'
+set :password, 'NJLinHV9gW7jUz'
+set :port, 24
+
+role :app, "198.58.109.239"
+role :web, "198.58.109.239"
+role :db,  "198.58.109.239", :primary => true
+
+set :branch, "master"
 
 default_run_options[:pty] = true
 
