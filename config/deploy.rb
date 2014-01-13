@@ -30,7 +30,7 @@ set :repository, "git@codebasehq.com:thegoodlab/authentic-ff/website.git"
 # Additional SCM settings
 set :scm, :git
 set :ssh_options, { :forward_agent => true }
-set :deploy_via, :remote_cache
+# set :deploy_via, :remote_cache
 set :copy_strategy, :checkout
 set :keep_releases, 3
 set :copy_compression, :bz2
