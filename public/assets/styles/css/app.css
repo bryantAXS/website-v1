@@ -11314,6 +11314,33 @@ html:hover [class^="ss-"] {
 .ss-share:before, .ss-share.right:after {
   content: ''; }
 
+/* line 1, ../sass/components/_buttons.scss */
+.btn {
+  background-color: #1b1f1d;
+  border: none;
+  color: white;
+  letter-spacing: 0.3px;
+  outline: none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  font-family: "FuturaHeavy";
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 300;
+  -webkit-transition: background-color 0.15s linear;
+  -moz-transition: background-color 0.15s linear;
+  -o-transition: background-color 0.15s linear;
+  transition: background-color 0.15s linear; }
+  /* line 13, ../sass/components/_buttons.scss */
+  .btn:hover {
+    background-color: #000;
+    color: white; }
+
 /* line 1, ../sass/components/_nav.scss */
 .nav-container {
   text-align: right; }
@@ -11917,10 +11944,13 @@ section {
   line-height: 19px;
   font-weight: 300; }
 /* line 333, ../sass/modules/_modules.scss */
+.work-gallery-copy-container.project-details {
+  padding-bottom: 20px; }
+/* line 337, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .project-traits {
   margin: 0;
   padding: 30px 0; }
-  /* line 338, ../sass/modules/_modules.scss */
+  /* line 342, ../sass/modules/_modules.scss */
   .work-gallery-copy-container .project-traits li {
     color: #fff;
     display: block;
@@ -11928,37 +11958,25 @@ section {
     font-size: 12px;
     line-height: 18px;
     font-weight: 300; }
-/* line 346, ../sass/modules/_modules.scss */
-.work-gallery-copy-container .back-to-clients {
-  color: #fff;
-  font-family: "FuturaHeavy";
-  font-size: 15px;
-  line-height: 21px;
-  font-weight: 300; }
-  /* line 350, ../sass/modules/_modules.scss */
-  .work-gallery-copy-container .back-to-clients span {
-    font-size: 12px;
-    margin-right: 5px;
-    position: relative; }
 
-/* line 362, ../sass/modules/_modules.scss */
+/* line 366, ../sass/modules/_modules.scss */
 .work-gallery-examples-container .slideshow {
   width: 100%; }
-  /* line 365, ../sass/modules/_modules.scss */
+  /* line 369, ../sass/modules/_modules.scss */
   .work-gallery-examples-container .slideshow img {
     width: 100%; }
 
-/* line 378, ../sass/modules/_modules.scss */
+/* line 382, ../sass/modules/_modules.scss */
 .about {
   padding-top: 130px; }
   @media only screen and (max-width: 40em) {
-    /* line 378, ../sass/modules/_modules.scss */
+    /* line 382, ../sass/modules/_modules.scss */
     .about {
       padding-top: 50px; } }
-  /* line 386, ../sass/modules/_modules.scss */
+  /* line 390, ../sass/modules/_modules.scss */
   .about > .row {
     position: relative; }
-  /* line 396, ../sass/modules/_modules.scss */
+  /* line 400, ../sass/modules/_modules.scss */
   .about h4 {
     color: white;
     margin: 0;
@@ -11967,7 +11985,7 @@ section {
     font-size: 24px;
     line-height: 24px;
     font-weight: 300; }
-  /* line 403, ../sass/modules/_modules.scss */
+  /* line 407, ../sass/modules/_modules.scss */
   .about .position {
     color: #dec17b;
     display: block;
@@ -11977,62 +11995,62 @@ section {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 411, ../sass/modules/_modules.scss */
+  /* line 415, ../sass/modules/_modules.scss */
   .about .social {
     margin: 0;
     padding: 0;
     padding-bottom: 100px;
     margin-top: 30px; }
     @media only screen and (max-width: 40em) {
-      /* line 411, ../sass/modules/_modules.scss */
+      /* line 415, ../sass/modules/_modules.scss */
       .about .social {
         padding-bottom: 100px; } }
-    /* line 422, ../sass/modules/_modules.scss */
+    /* line 426, ../sass/modules/_modules.scss */
     .about .social li {
       float: left;
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      /* line 427, ../sass/modules/_modules.scss */
+      /* line 431, ../sass/modules/_modules.scss */
       .about .social li a {
         color: white;
         -webkit-transition: color 200ms ease-in-out;
         -moz-transition: color 200ms ease-in-out;
         -o-transition: color 200ms ease-in-out;
         transition: color 200ms ease-in-out; }
-        /* line 430, ../sass/modules/_modules.scss */
+        /* line 434, ../sass/modules/_modules.scss */
         .about .social li a:hover {
           color: #dec17b; }
-      /* line 434, ../sass/modules/_modules.scss */
+      /* line 438, ../sass/modules/_modules.scss */
       .about .social li + li {
         margin-left: 12px; }
-  /* line 441, ../sass/modules/_modules.scss */
+  /* line 445, ../sass/modules/_modules.scss */
   .about .dude-1 {
     position: absolute;
     bottom: 0;
     left: 0px;
     width: 90%; }
     @media only screen and (max-width: 40em) {
-      /* line 441, ../sass/modules/_modules.scss */
+      /* line 445, ../sass/modules/_modules.scss */
       .about .dude-1 {
         bottom: auto;
         top: 0; } }
-  /* line 454, ../sass/modules/_modules.scss */
+  /* line 458, ../sass/modules/_modules.scss */
   .about .dude-2 {
     position: absolute;
     bottom: 0;
     right: 0px; }
     @media only screen and (max-width: 40em) {
-      /* line 454, ../sass/modules/_modules.scss */
+      /* line 458, ../sass/modules/_modules.scss */
       .about .dude-2 {
         bottom: auto;
         top: 0; } }
 
-/* line 472, ../sass/modules/_modules.scss */
+/* line 476, ../sass/modules/_modules.scss */
 .contact {
   background-color: #2f3633;
   padding-top: 130px; }
-  /* line 477, ../sass/modules/_modules.scss */
+  /* line 481, ../sass/modules/_modules.scss */
   .contact h3 {
     color: #dec17b;
     letter-spacing: 1px;
@@ -12041,14 +12059,14 @@ section {
     font-size: 19px;
     line-height: 33px;
     font-weight: 300; }
-  /* line 484, ../sass/modules/_modules.scss */
+  /* line 488, ../sass/modules/_modules.scss */
   .contact .project-doc {
     color: #dec17b;
     font-family: "FuturaBold";
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 489, ../sass/modules/_modules.scss */
+  /* line 493, ../sass/modules/_modules.scss */
   .contact .title {
     color: #dec17b;
     display: block;
@@ -12058,14 +12076,14 @@ section {
     font-size: 12px;
     line-height: 16px;
     font-weight: 300; }
-  /* line 497, ../sass/modules/_modules.scss */
+  /* line 501, ../sass/modules/_modules.scss */
   .contact ul {
     margin: 0;
     padding: 0; }
-    /* line 500, ../sass/modules/_modules.scss */
+    /* line 504, ../sass/modules/_modules.scss */
     .contact ul li {
       list-style-type: none; }
-      /* line 502, ../sass/modules/_modules.scss */
+      /* line 506, ../sass/modules/_modules.scss */
       .contact ul li a {
         color: white;
         font-family: "FuturaBook";
@@ -12076,24 +12094,24 @@ section {
         -moz-transition: all 250ms linear;
         -o-transition: all 250ms linear;
         transition: all 250ms linear; }
-        /* line 506, ../sass/modules/_modules.scss */
+        /* line 510, ../sass/modules/_modules.scss */
         .contact ul li a:hover {
           color: #dec17b; }
   @media only screen and (max-width: 40em) {
-    /* line 472, ../sass/modules/_modules.scss */
+    /* line 476, ../sass/modules/_modules.scss */
     .contact {
       padding-top: 80px;
       text-align: center; } }
   @media only screen and (max-width: 40em) {
-    /* line 518, ../sass/modules/_modules.scss */
+    /* line 522, ../sass/modules/_modules.scss */
     .contact .small-12 + .small-12 {
       padding-top: 50px; } }
 
-/* line 528, ../sass/modules/_modules.scss */
+/* line 532, ../sass/modules/_modules.scss */
 .address-container {
   padding-bottom: 20px; }
 
-/* line 532, ../sass/modules/_modules.scss */
+/* line 536, ../sass/modules/_modules.scss */
 address {
   color: white;
   font-family: "FuturaBook";
@@ -12101,7 +12119,7 @@ address {
   line-height: 22px;
   font-weight: 300; }
 
-/* line 537, ../sass/modules/_modules.scss */
+/* line 541, ../sass/modules/_modules.scss */
 .emails {
   color: white;
   display: block;
@@ -12110,15 +12128,15 @@ address {
   font-size: 15px;
   line-height: 23px;
   font-weight: 300; }
-  /* line 544, ../sass/modules/_modules.scss */
+  /* line 548, ../sass/modules/_modules.scss */
   .emails a {
     color: #dec17b; }
 
-/* line 550, ../sass/modules/_modules.scss */
+/* line 554, ../sass/modules/_modules.scss */
 .signature-container {
   padding: 100px 0 50px 0;
   text-align: right; }
-  /* line 554, ../sass/modules/_modules.scss */
+  /* line 558, ../sass/modules/_modules.scss */
   .signature-container span {
     color: #dec17b;
     font-family: "Eastwood";

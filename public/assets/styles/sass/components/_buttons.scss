@@ -1,0 +1,19 @@
+.btn{
+  background-color: $black;
+  border: none;
+  color: $white;
+  letter-spacing: 0.3px;
+  outline: none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  @include border-radius(3px);
+  @include font("FuturaHeavy", 12px);
+  @include transition(background-color 0.15s linear);
+
+  &:hover{
+    background-color: #000;
+    color: $white;
+  }
+
+
+}

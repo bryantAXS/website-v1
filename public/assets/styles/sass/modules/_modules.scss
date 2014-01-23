@@ -330,6 +330,10 @@ section{
     @include font("FuturaBook", 13px);
   }
 
+  &.project-details{
+    padding-bottom: 20px;
+  }
+
   .project-traits{
 
     margin:0;
@@ -344,14 +348,14 @@ section{
   }
 
   .back-to-clients{
-    color:#fff;
-    @include font("FuturaHeavy", 15px);
+    // color:#fff;
+    // @include font("FuturaHeavy", 15px);
 
-    span{
-      font-size:12px;
-      margin-right:5px;
-      position:relative;
-    }
+    // span{
+    //   font-size:12px;
+    //   margin-right:5px;
+    //   position:relative;
+    // }
 
   }
 
