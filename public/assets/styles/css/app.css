@@ -11944,13 +11944,10 @@ section {
   line-height: 19px;
   font-weight: 300; }
 /* line 333, ../sass/modules/_modules.scss */
-.work-gallery-copy-container.project-details {
-  padding-bottom: 20px; }
-/* line 337, ../sass/modules/_modules.scss */
 .work-gallery-copy-container .project-traits {
   margin: 0;
   padding: 30px 0; }
-  /* line 342, ../sass/modules/_modules.scss */
+  /* line 338, ../sass/modules/_modules.scss */
   .work-gallery-copy-container .project-traits li {
     color: #fff;
     display: block;
@@ -11958,6 +11955,10 @@ section {
     font-size: 12px;
     line-height: 18px;
     font-weight: 300; }
+
+/* line 360, ../sass/modules/_modules.scss */
+.project-details {
+  padding-bottom: 20px; }
 
 /* line 366, ../sass/modules/_modules.scss */
 .work-gallery-examples-container .slideshow {

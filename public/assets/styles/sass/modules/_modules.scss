@@ -330,10 +330,6 @@ section{
     @include font("FuturaBook", 13px);
   }
 
-  &.project-details{
-    padding-bottom: 20px;
-  }
-
   .project-traits{
 
     margin:0;
@@ -359,6 +355,10 @@ section{
 
   }
 
+}
+
+.project-details{
+  padding-bottom: 20px;
 }
 
 .work-gallery-examples-container{
